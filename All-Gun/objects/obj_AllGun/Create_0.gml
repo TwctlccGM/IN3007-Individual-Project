@@ -2,11 +2,14 @@
 enum ALLGUN_STATE
 {
 	RIFLE,
-	SHOTGUN
+	SHOTGUN,
+	LASERBEAM,
+	ROCKET
 }
 
 state = ALLGUN_STATE.RIFLE;
 
+shot_timer = 0;
 
 
 
