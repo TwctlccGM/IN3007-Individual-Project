@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 colliding_with_player = false;
 
 x_position = 640;

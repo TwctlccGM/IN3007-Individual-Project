@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 aim_direction = point_direction(x,y,mouse_x,mouse_y);
 speed = 20
 image_angle = aim_direction;

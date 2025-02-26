@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 if (colliding_with_player = true)
 {
 	draw_sprite_ext(spr_blackbar, 0, 0, 0, 1280, 2, 0, c_black, 1);

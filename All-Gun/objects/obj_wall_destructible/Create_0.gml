@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 health_points = 10;
 
 
