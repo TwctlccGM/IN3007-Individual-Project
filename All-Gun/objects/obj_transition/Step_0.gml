@@ -10,10 +10,10 @@ if (mode != TRANSITION_MODE.OFF)
 	else
 	{
 		// Math for black bars opening up
-		percent = min(1, percent + max(((1 - percent) / 10), 0.005));
+		percent = min(1.1, percent + max(((1 - percent) / 10), 0.005));
 	}
 	
-	if (percent == 1) || (percent == 0)
+	if (percent == 1.1) || (percent == 0)
 	{
 		switch(mode)
 		{

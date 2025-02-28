@@ -23,7 +23,7 @@ if (!place_meeting(x, y + 2, obj_floor)) { move_y += gunkickback_y; }; // Gun ki
 move_and_collide(move_x, move_y, obj_floor, 4, 0, 0, move_speed, -1); // xy movement and collisions are calculated
 gunkickback_y = 0;
 
-image_xscale = obj_AllGun.image_yscale * 2; // Face where the AllGun is being aimed
+if (instance_exists(obj_AllGun)) { image_xscale = obj_AllGun.image_yscale * 2; }; // Face where the AllGun is being aimed
 
 if (health_points <= 0) { slide_transition(TRANSITION_MODE.RESTART_ROOM); }; // Player death
 if keyboard_check_pressed(ord("R")) { slide_transition(TRANSITION_MODE.RESTART_GAME); }; // Restart game

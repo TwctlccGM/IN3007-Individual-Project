@@ -1,3 +1,6 @@
 /// @description
-health_points -= 50;
+health_points -= 50; 
+hit_flash = 3;
+
+
 
