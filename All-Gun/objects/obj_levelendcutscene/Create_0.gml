@@ -11,7 +11,7 @@ print = " ";
 letter = 0;
 next_line = 0;
 
-holdspace = 0; 
+// "\n" to put the same string on a new line
 strings[0] = "First line of text";
 strings[1] = "Second line of text";
 strings[2] = "Third line\nof text";

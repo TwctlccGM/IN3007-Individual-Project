@@ -12,7 +12,7 @@ for (var _i = 0; _i < menu_items; _i++)
 	if (menu_cursor == _i)
 	{
 		//_txt = string_insert("> ", _txt, 0);
-		if (menu_control) { draw_sprite(spr_AllGun, 0, gui_width - 180, gui_height - 50 -_i*35); }
+		if (menu_control) { draw_sprite(spr_AllGun, 0, gui_width - 165, gui_height - 50 -_i*35); }
 		var _col = c_white;
 	}
 	else

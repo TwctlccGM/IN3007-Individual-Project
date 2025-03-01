@@ -1,0 +1,26 @@
+/// @description
+// Camera
+camera_set_view_pos(view_camera[0], x_position, 180);
+x_position = max(x_position - 0.5, 0);
+
+
+// Draws letters of a sentence one by one
+letter += 0.5;
+print = string_copy(str, 1, letter);
+
+// If the final line of dialogue is reached...
+if (keyboard_check_pressed(vk_space)) && (next_line == array_length(strings) - 1)
+{
+	slide_transition(TRANSITION_MODE.NEXT);
+}
+	
+// If there is another line of dialogue waiting...
+if (keyboard_check_pressed(vk_space)) && (next_line < array_length(strings) - 1)
+{
+	letter = 0;
+	next_line++;
+}
+
+str = strings[next_line];	// Tells 'print' what text to draw (drawing is done in 'Draw GUI')
+
+
