@@ -11,7 +11,7 @@ print = string_copy(str, 1, letter);
 // If the final line of dialogue is reached...
 if (keyboard_check_pressed(vk_space)) && (next_line == array_length(strings) - 1)
 {
-	slide_transition(TRANSITION_MODE.NEXT);
+	scr_slide_transition(TRANSITION_MODE.NEXT);
 }
 	
 // If there is another line of dialogue waiting...

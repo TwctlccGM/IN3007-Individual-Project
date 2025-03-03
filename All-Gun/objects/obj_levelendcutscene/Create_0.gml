@@ -11,6 +11,8 @@ print = " ";
 letter = 0;
 next_line = 0;
 
+save_file = false;
+
 // "\n" to put the same string on a new line
 strings[0] = "First line of text";
 strings[1] = "Second line of text";

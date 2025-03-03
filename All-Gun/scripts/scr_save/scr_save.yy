@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "slide_transition",
+  "name": "scr_save",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

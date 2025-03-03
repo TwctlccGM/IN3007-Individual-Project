@@ -1,9 +1,10 @@
 /// @desc slide_transition(mode, targetroom)
 /// @arg mode sets transition mode between next, restart, and goto.
 /// @arg target sets the target room when using the goto mode.
-
-with (obj_transition)
-{
-	mode = argument[0];
-	if (argument_count > 1) target = argument[1];
+function scr_slide_transition(){
+	with (obj_transition)
+	{
+		mode = argument[0];
+		if (argument_count > 1) target = argument[1];
+	}
 }

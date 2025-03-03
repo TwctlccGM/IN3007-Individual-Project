@@ -31,16 +31,16 @@ if (menu_control)
 	switch (menu_selected)
 	{
 		case 2: default: 
-		slide_transition(TRANSITION_MODE.NEXT);
+		scr_slide_transition(TRANSITION_MODE.NEXT);
 		break;
 		
 		case 1:
-		slide_transition(TRANSITION_MODE.NEXT);
+		scr_slide_transition(TRANSITION_MODE.NEXT);
 		// implement save file system here
 		break;
 		
 		case 0: 
-		slide_transition(TRANSITION_MODE.END);
+		scr_slide_transition(TRANSITION_MODE.END);
 		break;
 	}
  }

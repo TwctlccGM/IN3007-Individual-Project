@@ -25,5 +25,5 @@ gunkickback_y = 0;
 
 if (instance_exists(obj_AllGun)) { image_xscale = obj_AllGun.image_yscale * 2; }; // Face where the AllGun is being aimed
 
-if (health_points <= 0) { slide_transition(TRANSITION_MODE.RESTART_ROOM); }; // Player death
-if keyboard_check_pressed(ord("R")) { slide_transition(TRANSITION_MODE.RESTART_GAME); }; // Restart game
+if (health_points <= 0) { scr_slide_transition(TRANSITION_MODE.RESTART_ROOM); }; // Player death
+if keyboard_check_pressed(ord("R")) { scr_slide_transition(TRANSITION_MODE.RESTART_GAME); }; // Restart game

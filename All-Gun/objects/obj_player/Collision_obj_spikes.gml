@@ -1,5 +1,5 @@
 /// @description
-slide_transition(TRANSITION_MODE.RESTART_ROOM);
+scr_slide_transition(TRANSITION_MODE.RESTART_ROOM);
 
 
 
