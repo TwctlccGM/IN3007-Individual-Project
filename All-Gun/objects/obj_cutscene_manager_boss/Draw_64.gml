@@ -1,5 +1,5 @@
 /// @description
-if (colliding_with_player = true)
+if (boss_defeated = true) // Cutscene trigger condition
 {
 	draw_sprite_ext(spr_blackbar, 0, 0, 0, 1280, 2, 0, c_black, 1);
 	draw_sprite_ext(spr_blackbar, 0, 0, 600, 1280, 2, 0, c_black, 1);

@@ -11,7 +11,10 @@
     "name": "AllGun and Player stuff",
     "path": "folders/Objects/AllGun and Player stuff.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_bullet_player",
+    "path": "objects/obj_parent_bullet_player/obj_parent_bullet_player.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

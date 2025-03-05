@@ -18,7 +18,7 @@ if (menu_control)
 		if (menu_cursor < 0) menu_cursor = menu_items - 1;
 	}
 	
-	if (keyboard_check_pressed(vk_enter))
+	if (keyboard_check_pressed(vk_space))
 	{
 		menu_x_target = gui_width + 200;
 		menu_selected = menu_cursor;

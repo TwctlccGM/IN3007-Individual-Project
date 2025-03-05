@@ -3,19 +3,16 @@
 //{
 	print_collectible = string(level_collectible_get);
 	print_time = string(level_time);
+	print_level = string(current_level);
 	draw_set_font(fnt_cutscene);
 	draw_set_color(c_white);
 	draw_text(150, 50, "Collectible: ");
 	draw_text(300, 50, print_collectible); // Collectible obtained
 	draw_text(450, 50, "Time taken: ");
-	draw_text(600, 50, print_time); // Collectible obtained
+	draw_text(600, 50, print_time); // Time taken
+	draw_text(750, 50, "Level: ");
+	draw_text(850, 50, print_level); // Current level
 //}
-
-
-
-
-
-
 
 
 

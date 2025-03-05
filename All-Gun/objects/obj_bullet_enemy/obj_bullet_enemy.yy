@@ -11,7 +11,10 @@
     "name": "Enemy stuff",
     "path": "folders/Objects/Enemy stuff.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_bullet_enemy",
+    "path": "objects/obj_parent_bullet_enemy/obj_parent_bullet_enemy.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

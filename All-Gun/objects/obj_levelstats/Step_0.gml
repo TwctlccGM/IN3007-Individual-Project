@@ -1,5 +1,7 @@
 /// @description
-if (level_ended == true) || (room = room_elevator)
+
+// Save stats
+if (level_ended == true)
 {
 	var _root_list = ds_list_create();	
 	var _map = ds_map_create();
@@ -9,6 +11,7 @@ if (level_ended == true) || (room = room_elevator)
 	// var _level = room_get_name(room); // This will be used for storing multiple level stats later
 	ds_map_add(_map, "collectible", level_collectible_get);
 	ds_map_add(_map, "time", level_time);
+	ds_map_add(_map, "current level", current_level);
 	
 	// Wrap root list in a map
 	//var _wrapper = ds_map_create();
@@ -20,13 +23,39 @@ if (level_ended == true) || (room = room_elevator)
 	
 	ds_map_destroy(_map);
 }
-else 
+else if (room != room_elevator)
 { 
 	level_time_decimal += 0.02;
 	level_time = floor(level_time_decimal); 
 };
+	
 
-
+if (room == room_elevator) && (keyboard_check_pressed(vk_space))
+{
+	switch(current_level)
+	{
+		case 1:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_test2);
+			break;
+		}
+		case 2:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_test3);
+			break;
+		}
+		case 3:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_test4);
+			break;
+		}
+		case 4:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_test);
+			break;
+		}
+	}
+}
 
 
 

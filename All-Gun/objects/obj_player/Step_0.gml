@@ -3,7 +3,7 @@
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")); // For left/right
 move_x *= move_speed;
 
-if (place_meeting(x, y + 2, obj_floor)) // Checks if the player is on the ground
+if (place_meeting(x, y + 5, obj_floor)) // Checks if the player is on the ground
 {
 	move_y = 0; // Resets fall speed
 	if (!place_meeting(x + move_x, y + 2, obj_floor) && place_meeting(x + move_x, y + 10, obj_floor)) // For slopes
