@@ -36,12 +36,12 @@ if (room == room_elevator) && (keyboard_check_pressed(vk_space))
 	{
 		case 1:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_test2);
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_level_2);
 			break;
 		}
 		case 2:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_test3);
+			scr_slide_transition(TRANSITION_MODE.GOTO, room_level_1);
 			break;
 		}
 		case 3:

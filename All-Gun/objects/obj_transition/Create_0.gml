@@ -16,7 +16,7 @@ enum TRANSITION_MODE
 	END
 }
 mode = TRANSITION_MODE.INTRO;
-percent = 1;
+percent = 1.1;
 target = room;
 
 

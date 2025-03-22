@@ -1,13 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_cutscene_player",
-  "eventList": [],
+  "name": "obj_pickup_AllGun",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Cutscene stuff",
-    "path": "folders/Objects/Cutscene stuff.yy",
+    "name": "AllGun and Player stuff",
+    "path": "folders/Objects/AllGun and Player stuff.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_cutscene_player",
-    "path": "sprites/spr_cutscene_player/spr_cutscene_player.yy",
+    "name": "spr_AllGun",
+    "path": "sprites/spr_AllGun/spr_AllGun.yy",
   },
   "spriteMaskId": null,
   "visible": true,

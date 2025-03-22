@@ -8,6 +8,6 @@ view_height_half = camera_get_view_height(cam) * 0.5;
 x_to = xstart;
 y_to = ystart;
 
-
+background_elevator = layer_get_id("Background_Moving");
 
 
