@@ -1,5 +1,6 @@
 /// @description
-instance_destroy();
+
+instance_destroy(); // Remove the projectile
 
 
 

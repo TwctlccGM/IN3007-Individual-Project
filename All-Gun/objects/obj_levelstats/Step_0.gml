@@ -1,35 +1,41 @@
 /// @description
 
-// Save stats
+/// SAVE STATS
 if (level_ended == true)
 {
-	var _root_list = ds_list_create();	
+	// Create map to store data in	
 	var _map = ds_map_create();
-	//ds_list_add(_root_list, _map);
-	//ds_list_mark_as_map(_root_list, ds_list_size(_root_list) - 1);
-	
 	// var _level = room_get_name(room); // This will be used for storing multiple level stats later
+	
+	// Add data from variables to map
 	ds_map_add(_map, "collectible", level_collectible_get);
 	ds_map_add(_map, "time", level_time);
 	ds_map_add(_map, "current level", current_level);
-	
-	// Wrap root list in a map
-	//var _wrapper = ds_map_create();
-	//ds_map_add_list(_wrapper, "ROOT", _root_list);
+	// AllGun modes unlocked
+	with (obj_AllGun)
+	{
+		ds_map_add(_map, "shotgun unlocked?", unlocked_shotgun);
+		ds_map_add(_map, "laser unlocked?", unlocked_laser);
+		ds_map_add(_map, "rocket unlocked?", unlocked_rocket);
+	}
 	
 	// Save to string
 	var _string = json_encode(_map);
+	// This script saves the string to a save file
 	scr_save_string("savegame.sav", _string);
 	
+	// Delete the map, its data has been saved so the map is no longer needed
 	ds_map_destroy(_map);
 }
 else if (room != room_elevator)
 { 
-	level_time_decimal += 0.02;
-	level_time = floor(level_time_decimal); 
+	// Increase the 'level_time' timer 
+	// ONLY if the player is in a level (aka not in elevator) and the level has not ended
+	level_time_decimal += 0.02; 
+	level_time = floor(level_time_decimal); // Turns the level timer into a whole number
 };
 	
-
+// Press Spacebar to go to next level
 if (room == room_elevator) && (keyboard_check_pressed(vk_space))
 {
 	switch(current_level)
@@ -44,6 +50,8 @@ if (room == room_elevator) && (keyboard_check_pressed(vk_space))
 			scr_slide_transition(TRANSITION_MODE.GOTO, room_level_1);
 			break;
 		}
+		
+		// Replace these with actual levels as they get added
 		case 3:
 		{
 			scr_slide_transition(TRANSITION_MODE.GOTO, room_test4);

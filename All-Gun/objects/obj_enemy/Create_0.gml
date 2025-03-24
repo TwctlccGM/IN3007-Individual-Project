@@ -1,7 +1,9 @@
 /// @description
-shot_timer = 0;
-health_points = 20;
-hit_flash = 0;
+
+// Initialise variables
+shot_timer = 0;		// Timer to delay shots
+health_points = 20; // Health
+hit_flash = 0;		// Hit flash timer
 
 
 

@@ -1,12 +1,13 @@
 /// @description
-draw_self();
+draw_self(); // Render player
 
-if (hit_flash > 0)
+// Draw hitflash on player
+if (hit_flash > 0) 
 {
-	hit_flash--;
-	shader_set(sh_white);
-	draw_self();
-	shader_reset();
+	hit_flash--; // Hitflash timer
+	shader_set(sh_white); // Shader
+	draw_self(); // Update render
+	shader_reset(); 
 }
 
 

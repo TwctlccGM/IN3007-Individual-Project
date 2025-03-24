@@ -1,19 +1,15 @@
 /// @description
-boss_defeated = false;
 
-x_position = 640;
-alpha = 1;
-fadeout = 0;
+// Initialise variables 
+boss_defeated = false; // Used to trigger cutscene
 
-str = " ";
-print = " ";
+str = " ";		// Used to store current string.
+print = " ";	// used to print current string...
+letter = 0;		// ...letter by letter...
+next_line = 0;  // ...and line by line.
 
-letter = 0;
-next_line = 0;
-
-save_file = false;
-
-// "\n" to put the same string on a new line
+// Strings of dialogue, change these to change the dialogue
+// *NOTE: Use "\n" to put the same string on a new line
 strings[0] = "That was a tough fight..."
 strings[1] = "...but I did it.";
 strings[2] = "I won!";

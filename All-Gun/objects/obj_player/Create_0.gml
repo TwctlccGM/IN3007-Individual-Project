@@ -1,15 +1,15 @@
-/// @description Variables
-health_points = 3;
-hit_flash = 0;
+/// @description 
+// Initialise variables
+health_points = 3;		// Health
+hit_flash = 0;			// Hitflash timer
 
-move_speed = 5;
-jump_speed = 15;
+move_speed = 5;			// Player speed
+jump_speed = 15;		// Jump acceleration (Bigger = Higher jump)
 
-gunkickback_y = 0;
+gunkickback_y = 0;		// Gun kickback
+ 
+falling = false;		// If player is moving 
 
-falling = false;
-fast_falling = false;
-
-move_x = 0;
-move_y = 0;
+move_x = 0;				// Movement (horizontal)
+move_y = 0;				// Movement (vertical)
 
