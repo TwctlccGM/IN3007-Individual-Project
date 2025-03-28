@@ -5,28 +5,33 @@
 
 // Rifle
 if keyboard_check(ord("1")) && state != ALLGUN_STATE.RIFLE		
-{ state = ALLGUN_STATE.RIFLE;		shot_timer = 0; };
+{ state = ALLGUN_STATE.RIFLE; };
 // Shotgun
 if keyboard_check(ord("2")) && state != ALLGUN_STATE.SHOTGUN	&& unlocked_shotgun == true
-{ state = ALLGUN_STATE.SHOTGUN;		shot_timer = 0; };
+{ state = ALLGUN_STATE.SHOTGUN;	};
 // Laser
 if keyboard_check(ord("3")) && state != ALLGUN_STATE.LASERBEAM  && unlocked_laser == true
-{ state = ALLGUN_STATE.LASERBEAM;	shot_timer = 0; };
+{ state = ALLGUN_STATE.LASERBEAM; };
 // Rocket
 if keyboard_check(ord("4")) && state != ALLGUN_STATE.ROCKET		&& unlocked_rocket == true
-{ state = ALLGUN_STATE.ROCKET;		shot_timer = 0; };
+{ state = ALLGUN_STATE.ROCKET; };
 
-shot_timer--; // Decrement shot timer to allow firing again
+// Decrement shot timers to allow firing again
+shot_timer_rifle--;
+shot_timer_shotgun--;
+//shot_timer_laser--; // Laser has no shot timer
+shot_timer_rocket--;
+
 recoil = 0; // Reset visual recoil
 
 // AllGun mode state machine
 switch (state)
 {
 case ALLGUN_STATE.RIFLE:
-	if mouse_check_button(mb_left) && shot_timer <= 0 // Fire rifle
+	if mouse_check_button(mb_left) && shot_timer_rifle <= 0 // Fire rifle
 	{
 		var _default_gunkickback_y = 1;  // Bigger number = Increased knockback
-		shot_timer = 3;					 // Bigger number = Longer cooldown
+		shot_timer_rifle = 3;					 // Bigger number = Longer cooldown
 		recoil = 2;						 // Bigger number = Bigger visual recoil
 		
 		with(obj_player) // Changes gunkickback depending on if player is moving downward
@@ -45,31 +50,29 @@ case ALLGUN_STATE.RIFLE:
     break;
 	
 case ALLGUN_STATE.SHOTGUN:
-	if mouse_check_button_pressed(mb_left) && shot_timer <= 0 // Fire shotgun
+	if mouse_check_button(mb_left) && shot_timer_shotgun <= 0 // Fire shotgun
 	{
 		var _default_gunkickback_y = 15; // Bigger number = Increased knockback
-		shot_timer = 30;				 // Bigger number = Longer cooldown
+		shot_timer_shotgun = 45;				 // Bigger number = Longer cooldown
 		recoil = 10;					 // Bigger number = Bigger visual recoil
 		
 		with(obj_player) // Changes gunkickback depending on if player is moving downward
 		{ 
 			// Normal kickback
-			if falling == false {
-			gunkickback_y = lengthdir_y(_default_gunkickback_y, other.image_angle - 180); }
+			//if falling == false {
+			gunkickback_y = lengthdir_y(_default_gunkickback_y, other.image_angle - 180); //}
 			// Increases kickback if player is falling (so they hover but don't fly away)
-			else if falling == true { // Increases kickback if player is falling
-			gunkickback_y = lengthdir_y(_default_gunkickback_y, other.image_angle - 180) * 1.7; }
+			//else if falling == true { // Increases kickback if player is falling
+			//gunkickback_y = lengthdir_y(_default_gunkickback_y, other.image_angle - 180) * 1.7; }
 		}
 		
-		// Create projectiles (could probably do this in a better way but whatever, this works)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
-		instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
+		// Create projectiles
+		var _i = 0;
+		while (_i < 20) // Determines amount of projectiles
+		{
+			instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
+			 _i++
+		}
 	};
     break;
 	
@@ -85,10 +88,10 @@ case ALLGUN_STATE.LASERBEAM:
 	break;
 
 case ALLGUN_STATE.ROCKET:
-	if mouse_check_button_pressed(mb_left) && shot_timer <= 0 // Fire rocket
+	if mouse_check_button(mb_left) && shot_timer_rocket <= 0 // Fire rocket
 	{
 		// Rocket has no kickback
-		shot_timer = 60; // Bigger number = Longer cooldown
+		shot_timer_rocket = 60; // Bigger number = Longer cooldown
 		recoil = 10;	 // Bigger number = Bigger visual recoil
 		
 		// Create projectile

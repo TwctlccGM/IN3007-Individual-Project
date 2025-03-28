@@ -16,7 +16,11 @@ unlocked_shotgun = false;
 unlocked_laser = false;
 unlocked_rocket	= false;
 
-shot_timer = 0; // Variable to control rate of fire
+// Variables to control rate of fire
+shot_timer_rifle = 0; 
+shot_timer_shotgun = 0; 
+//shot_timer_laser = 0; // Laser has no shot timer
+shot_timer_rocket = 0; 
 recoil = 0; // Variable to control visual recoil (not kickback)
 
 // Load save data to see which modes were unlocked in previous levels
