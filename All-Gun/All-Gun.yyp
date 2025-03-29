@@ -68,6 +68,7 @@
     {"id":{"name":"spr_smoke","path":"sprites/spr_smoke/spr_smoke.yy",},},
     {"id":{"name":"obj_collectible","path":"objects/obj_collectible/obj_collectible.yy",},},
     {"id":{"name":"spr_black","path":"sprites/spr_black/spr_black.yy",},},
+    {"id":{"name":"room_level_3","path":"rooms/room_level_3/room_level_3.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"obj_laserbeam","path":"objects/obj_laserbeam/obj_laserbeam.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
@@ -101,6 +102,7 @@
     {"id":{"name":"obj_cutscene_manager_levelend","path":"objects/obj_cutscene_manager_levelend/obj_cutscene_manager_levelend.yy",},},
     {"id":{"name":"spr_shotgun","path":"sprites/spr_shotgun/spr_shotgun.yy",},},
     {"id":{"name":"spr_rocket","path":"sprites/spr_rocket/spr_rocket.yy",},},
+    {"id":{"name":"obj_enemy_moving","path":"objects/obj_enemy_moving/obj_enemy_moving.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_player_shrunk","path":"sprites/spr_player_shrunk/spr_player_shrunk.yy",},},
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},},
@@ -148,6 +150,7 @@
     {"roomId":{"name":"room_test2","path":"rooms/room_test2/room_test2.yy",},},
     {"roomId":{"name":"room_test3","path":"rooms/room_test3/room_test3.yy",},},
     {"roomId":{"name":"room_test4","path":"rooms/room_test4/room_test4.yy",},},
+    {"roomId":{"name":"room_level_3","path":"rooms/room_level_3/room_level_3.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

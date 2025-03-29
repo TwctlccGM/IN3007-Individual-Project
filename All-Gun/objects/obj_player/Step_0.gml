@@ -8,7 +8,7 @@ move_x *= move_speed; // Move horizontally based on move_speed
 /// Vertical movement (Jumping)
 
 // If on the ground
-if (place_meeting(x, y + 5, obj_floor)) // Checks if the player is on the ground
+if (place_meeting(x, y + 2, obj_floor)) // Checks if the player is on the ground
 {
 	coyote_time = 6; // Sets coyote timer
 	move_y = 0; // Stop vertical movement
@@ -38,7 +38,7 @@ else { falling = false;}
 
 move_y += gunkickback_y; // Gun kickback
 
-move_and_collide(move_x, move_y, obj_floor, 4, 0, 0, move_speed, -1); // xy movement and collisions are calculated
+move_and_collide(move_x, move_y, obj_floor, 8, 0, 0, move_speed, -1); // xy movement and collisions are calculated
 
 gunkickback_y = 0; // Reset gunkickback
 

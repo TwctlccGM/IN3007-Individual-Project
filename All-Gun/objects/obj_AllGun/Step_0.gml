@@ -31,7 +31,7 @@ case ALLGUN_STATE.RIFLE:
 	if mouse_check_button(mb_left) && shot_timer_rifle <= 0 // Fire rifle
 	{
 		var _default_gunkickback_y = 1;  // Bigger number = Increased knockback
-		shot_timer_rifle = 3;					 // Bigger number = Longer cooldown
+		shot_timer_rifle = 3;			 // Bigger number = Longer cooldown
 		recoil = 2;						 // Bigger number = Bigger visual recoil
 		
 		with(obj_player) // Changes gunkickback depending on if player is moving downward
@@ -53,7 +53,7 @@ case ALLGUN_STATE.SHOTGUN:
 	if mouse_check_button(mb_left) && shot_timer_shotgun <= 0 // Fire shotgun
 	{
 		var _default_gunkickback_y = 15; // Bigger number = Increased knockback
-		shot_timer_shotgun = 45;				 // Bigger number = Longer cooldown
+		shot_timer_shotgun = 30;		 // Bigger number = Longer cooldown
 		recoil = 10;					 // Bigger number = Bigger visual recoil
 		
 		with(obj_player) // Changes gunkickback depending on if player is moving downward
@@ -92,7 +92,7 @@ case ALLGUN_STATE.ROCKET:
 	{
 		// Rocket has no kickback
 		shot_timer_rocket = 60; // Bigger number = Longer cooldown
-		recoil = 10;	 // Bigger number = Bigger visual recoil
+		recoil = 10;			// Bigger number = Bigger visual recoil
 		
 		// Create projectile
 		instance_create_layer(x + 3, y, "Projectiles", obj_rocket)
