@@ -13,8 +13,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "AllGun and Player stuff",
-    "path": "folders/Objects/AllGun and Player stuff.yy",
+    "name": "AllGun and Player Objects",
+    "path": "folders/Objects/AllGun and Player Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -10,12 +10,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Level objects and stuff",
-    "path": "folders/Objects/Level objects and stuff.yy",
+    "name": "Level Objects",
+    "path": "folders/Objects/Level Objects.yy",
   },
   "parentObjectId": {
-    "name": "obj_floor",
-    "path": "objects/obj_floor/obj_floor.yy",
+    "name": "obj_wall",
+    "path": "objects/obj_wall/obj_wall.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -1,12 +1,12 @@
 /// @description
 
 // Enemy movement and gravity
-if (!place_meeting(x, y + 5, obj_floor)) { move_y += 1; } // In air
-if (place_meeting(x, y + 5, obj_floor))  { move_y = 0;  } // On ground
-if (place_meeting(x + 3, y, obj_floor))  { move_x = -3; } // Touching right wall
-if (place_meeting(x - 3, y, obj_floor))  { move_x = 3;  } // Touching left wall
+if (!place_meeting(x, y + 5, obj_wall)) { move_y += 1; } // In air
+if (place_meeting(x, y + 5, obj_wall))  { move_y = 0;  } // On ground
+if (place_meeting(x + 3, y, obj_wall))  { move_x = -3; } // Touching right wall
+if (place_meeting(x - 3, y, obj_wall))  { move_x = 3;  } // Touching left wall
 
-move_and_collide(move_x, move_y, obj_floor, 4, 0, 0, move_speed, -1); // Calculate movement
+move_and_collide(move_x, move_y, obj_wall, 4, 0, 0, move_speed, -1); // Calculate movement
 
 // Enemy shooting
 /*shot_timer--;

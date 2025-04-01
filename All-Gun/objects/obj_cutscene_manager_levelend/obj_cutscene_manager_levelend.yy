@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Cutscene stuff",
-    "path": "folders/Objects/Cutscene stuff.yy",
+    "name": "Cutscene Objects",
+    "path": "folders/Objects/Cutscene Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

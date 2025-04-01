@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Hidden objects",
-    "path": "folders/Objects/Hidden objects.yy",
+    "name": "Hidden Objects",
+    "path": "folders/Objects/Hidden Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
