@@ -2,7 +2,7 @@
 
 // Initialise variables
 direction = point_direction(x,y,mouse_x,mouse_y); // Sets movement direction towards player cursor
-direction = random_range(direction - 5, direction + 5) // Sets random spread
+direction = random_range(direction - 10, direction + 10) // Sets random spread
 image_angle = direction; // Makes sprite direction match movement direction
 speed = 20 // Moves in a straight line at this speed
 

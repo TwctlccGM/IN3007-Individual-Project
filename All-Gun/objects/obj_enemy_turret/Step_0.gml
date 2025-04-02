@@ -10,11 +10,12 @@
 
 with(obj_turret_target) 
 {
-	// The 'gate' and 'button' variables are created in the objects 'Creation Code' in the room editor itself.
-	// These variables should equal to a number (e.g. 'gate = 1') and match each other.
-	// For example, when the button with 'button = 1' is activated, the gate with 'gate = 1' is opened.
+	// The 'target' and 'turret' variables are created in the objects 'Creation Code' in the room editor itself.
+	// These variables should equal to a number (e.g. 'target = 1') and match each other.
+	// For example, the turret with 'turret = 1' will shoot towards the target with 'target = 1'.
     if(target == other.turret)
 	{
+		// Make turret point towards the target it is assigned to
 		other.direction = point_direction(other.x, other.y, self.x, self.y);
     }
 }
@@ -24,10 +25,10 @@ shot_timer--;
 if shot_timer <= 0 
 { 
 	// Shot delay (60 frames = 1 second)
-	shot_timer = 60;
+	shot_timer = shot_speed;
 	// Create projectile
-	var _direction = { direction : direction };
-	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret, _direction); 
+	var _direction = { direction : direction }; // Struct to tell the bullet to go in the same direction as the turret
+	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret, _direction); // Struct is given to the bullet as its created
 }
 
 // Enemy dies
