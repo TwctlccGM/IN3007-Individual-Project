@@ -96,6 +96,7 @@
     {"id":{"name":"obj_smoke","path":"objects/obj_smoke/obj_smoke.yy",},},
     {"id":{"name":"obj_wall_destructible","path":"objects/obj_wall_destructible/obj_wall_destructible.yy",},},
     {"id":{"name":"spr_tesla","path":"sprites/spr_tesla/spr_tesla.yy",},},
+    {"id":{"name":"scr_collision_normal","path":"scripts/scr_collision_normal/scr_collision_normal.yy",},},
     {"id":{"name":"obj_enemy_turret","path":"objects/obj_enemy_turret/obj_enemy_turret.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"spr_graffiti_exclamation","path":"sprites/spr_graffiti_exclamation/spr_graffiti_exclamation.yy",},},
@@ -151,8 +152,8 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"room_level_3","path":"rooms/room_level_3/room_level_3.yy",},},
-    {"roomId":{"name":"room_level_2","path":"rooms/room_level_2/room_level_2.yy",},},
     {"roomId":{"name":"room_level_1","path":"rooms/room_level_1/room_level_1.yy",},},
+    {"roomId":{"name":"room_level_2","path":"rooms/room_level_2/room_level_2.yy",},},
     {"roomId":{"name":"room_menu","path":"rooms/room_menu/room_menu.yy",},},
     {"roomId":{"name":"room_introcutscene","path":"rooms/room_introcutscene/room_introcutscene.yy",},},
     {"roomId":{"name":"room_elevator","path":"rooms/room_elevator/room_elevator.yy",},},
