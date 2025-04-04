@@ -15,7 +15,16 @@
 }
 else { instance_destroy(self); }; */
 
-var _olddirection = direction
+//var _olddirection = direction
+
+/*while (!place_meeting(x + sign(speed), y, obj_wall))
+{
+	x = x + sign(speed);
+}
+while (!place_meeting(x, y  + sign(speed), obj_wall))
+{
+	y = y + sign(speed);
+}*/
 
 if bounces > 0
     {
@@ -25,7 +34,8 @@ if bounces > 0
     }
 else { instance_destroy(self); };
 
-var _collisionangle = direction - _olddirection
+//var _collisionangle = direction - _olddirection 
+
 //instance_destroy()
 
 

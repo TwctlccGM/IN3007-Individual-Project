@@ -1,6 +1,6 @@
 /// @description
 
-x += 3; // Move right
+x += 2; // Move right
 
 
 

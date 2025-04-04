@@ -20,7 +20,7 @@ draw_text(width * 0.85, 10, "Level: ");				// Current level
 draw_text(width * 0.90, 10, print_level);
 
 // Print rank (only in elevator room)
-if (room == room_elevator)
+if (room == rm_elevator)
 {
 	draw_text(width_half * 0.98, height_half * 1.51, "Rank: ");
 	draw_text(width_half * 1.03, height_half * 1.51, rank);

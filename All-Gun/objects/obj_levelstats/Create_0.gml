@@ -17,7 +17,7 @@ rank = "None";
 
 /// LOAD STATS
 // Player is in elevator room, not a level
-if (room == room_elevator)
+if (room == rm_elevator)
 {	
 	// Load save file
 	var _map = scr_load_json("savegame.sav");
@@ -39,29 +39,27 @@ if (room == room_elevator)
 }
 
 // Player is in a level, not elevator room
-if (room != room_elevator)
+if (room != rm_elevator)
 {
 	// Update current level based on current room
 	switch(room)
 	{
-		case room_level_1:
+		case rm_level_1:
 		{
 			current_level = 1;
 			break;
 		}
-		case room_level_2:
+		case rm_level_2:
 		{
 			current_level = 2;
 			break;
 		}
-		
-		// Replace the following cases with new levels once they're made
-		case room_test3:
+		case rm_level_3:
 		{
 			current_level = 3;
 			break;
 		}
-		case room_test4:
+		case rm_level_4:
 		{
 			current_level = 4;
 			break;

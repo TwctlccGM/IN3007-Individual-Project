@@ -10,7 +10,7 @@ if (boss_defeated = true) // Cutscene trigger condition
 	if (keyboard_check_pressed(vk_space)) && (next_line == array_length(strings) - 1)
 	{
 		// Level ends, go to level stats elevator scene
-		scr_slide_transition(TRANSITION_MODE.GOTO, room_elevator);
+		scr_slide_transition(TRANSITION_MODE.GOTO, rm_elevator);
 	}
 	
 	// If there is another line of dialogue waiting...

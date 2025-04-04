@@ -27,7 +27,7 @@ if (level_ended == true)
 	// Delete the map, its data has been saved so the map is no longer needed
 	ds_map_destroy(_map);
 }
-else if (room != room_elevator)
+else if (room != rm_elevator)
 { 
 	// Increase the 'level_time' timer 
 	// ONLY if the player is in a level (aka not in elevator) and the level has not ended
@@ -36,30 +36,28 @@ else if (room != room_elevator)
 };
 	
 // Press Spacebar to go to next level
-if (room == room_elevator) && (keyboard_check_pressed(vk_space))
+if (room == rm_elevator) && (keyboard_check_pressed(vk_space))
 {
 	switch(current_level)
 	{
 		case 1:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_level_2);
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_2);
 			break;
 		}
 		case 2:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_level_1);
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_3);
 			break;
 		}
-		
-		// Replace these with actual levels as they get added
 		case 3:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_test4);
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_4);
 			break;
 		}
 		case 4:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, room_test);
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_1);
 			break;
 		}
 	}
