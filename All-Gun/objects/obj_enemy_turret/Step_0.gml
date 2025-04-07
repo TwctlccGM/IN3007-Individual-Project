@@ -22,14 +22,21 @@ with(obj_turret_target)
 
 // Enemy shooting
 shot_timer--;
-if shot_timer <= 0 
+if shot_timer <= 0 //&& shot_burst_amount >= 0
 { 
 	// Shot delay (60 frames = 1 second)
 	shot_timer = shot_speed;
+	shot_burst_amount--;
 	// Create projectile
 	var _direction = { direction : direction }; // Struct to tell the bullet to go in the same direction as the turret
 	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret, _direction); // Struct is given to the bullet as its created
 }
+
+if shot_burst_amount <= 0 && shot_burst_total != 0
+{ 
+	shot_timer = shot_speed * 3;
+	shot_burst_amount = shot_burst_total;
+};
 
 // Enemy dies
 if (health_points <= 0) { instance_destroy() };

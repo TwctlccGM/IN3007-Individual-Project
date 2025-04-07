@@ -96,6 +96,11 @@ case ALLGUN_STATE.ROCKET:
 		
 		// Create projectile
 		instance_create_layer(x + 3, y, "Projectiles", obj_rocket)
+		/*
+		if (!place_meeting(mouse_x, mouse_y, obj_player))
+		{
+			instance_create_layer(mouse_x - 32, mouse_y - 32, "Projectiles", obj_wall_destructible);
+		}*/  // Code for creating a 'block', but can't really think of good level design for this type of gun
 	};
 	break;
 }

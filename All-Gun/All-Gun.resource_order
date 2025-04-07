@@ -112,6 +112,7 @@
     {"name":"spr_explosion","order":2,"path":"sprites/spr_explosion/spr_explosion.yy",},
     {"name":"spr_graffiti_D","order":6,"path":"sprites/spr_graffiti_D/spr_graffiti_D.yy",},
     {"name":"spr_blackbar","order":1,"path":"sprites/spr_blackbar/spr_blackbar.yy",},
+    {"name":"rm_level_old_4","order":14,"path":"rooms/rm_level_old_4/rm_level_old_4.yy",},
     {"name":"obj_rocket","order":5,"path":"objects/obj_rocket/obj_rocket.yy",},
     {"name":"rm_level_5","order":13,"path":"rooms/rm_level_5/rm_level_5.yy",},
     {"name":"rm_elevator","order":4,"path":"rooms/rm_elevator/rm_elevator.yy",},

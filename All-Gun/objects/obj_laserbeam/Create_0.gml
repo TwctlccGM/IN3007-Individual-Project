@@ -2,7 +2,7 @@
 
 direction = point_direction(x,y,mouse_x,mouse_y); // Sets movement direction towards player cursor
 image_angle = direction; // Makes sprite direction match movement direction
-speed = 30 // Moves in a straight line at this speed
+speed = 20 // Moves in a straight line at this speed
 
 damage_enemy = 1; // How much damage it deals to enemies
 damage_wall = 0; // How much damage it deals to walls
