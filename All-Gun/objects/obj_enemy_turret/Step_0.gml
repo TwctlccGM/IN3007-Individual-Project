@@ -29,7 +29,8 @@ if shot_timer <= 0 //&& shot_burst_amount >= 0
 	shot_burst_amount--;
 	// Create projectile
 	var _direction = { direction : direction }; // Struct to tell the bullet to go in the same direction as the turret
-	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret, _direction); // Struct is given to the bullet as its created
+	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret, _direction);
+	// if (bullet_type = 1) { instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_turret_noclip, _direction); } // Bullets clip through walls
 }
 
 if shot_burst_amount <= 0 && shot_burst_total != 0

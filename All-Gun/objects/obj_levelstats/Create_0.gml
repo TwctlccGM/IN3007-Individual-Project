@@ -64,5 +64,20 @@ if (room != rm_elevator)
 			current_level = 4;
 			break;
 		}
+		case rm_level_5:
+		{
+			current_level = 5;
+			break;
+		}
+		case rm_level_6:
+		{
+			current_level = 6;
+			break;
+		}
+		case rm_level_boss:
+		{
+			current_level = 7;
+			break;
+		}
 	}
 }

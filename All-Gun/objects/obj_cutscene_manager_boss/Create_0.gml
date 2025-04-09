@@ -1,6 +1,11 @@
 /// @description
 
 // Initialise variables 
+width = display_get_gui_width();
+height = display_get_gui_height();
+height_half = height / 2;
+width_half = width / 2;
+
 boss_defeated = false; // Used to trigger cutscene
 
 str = " ";		// Used to store current string.

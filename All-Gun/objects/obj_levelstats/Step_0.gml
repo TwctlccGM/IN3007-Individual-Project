@@ -57,7 +57,22 @@ if (room == rm_elevator) && (keyboard_check_pressed(vk_space))
 		}
 		case 4:
 		{
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_1);
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_5);
+			break;
+		}
+		case 5:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_6);
+			break;
+		}
+		case 6:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_boss);
+			break;
+		}
+		case 7:
+		{
+			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_end);
 			break;
 		}
 	}
