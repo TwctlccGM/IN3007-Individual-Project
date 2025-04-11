@@ -1,5 +1,8 @@
 /// @description Movement
 
+// Prevent player from doing stuff when they reach the level end cutscene
+if (!player_paused)
+{
 /// Horizontal movement (Running)
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")); // Move left/right
 move_x *= move_speed; // Move horizontally based on move_speed
@@ -24,7 +27,7 @@ coyote_time--; // Decrement this to prevent player jumping whenever they want
 if (coyote_time > 0) // Coyote time, so player can jump shortly after leaving the ground
 {
 	// Jump
-	if (keyboard_check_pressed(ord("W"))) move_y -= jump_speed;
+	if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"))) { move_y -= jump_speed; };
 }
 
 if (move_y < 10) // If in the air
@@ -52,3 +55,7 @@ if (health_points <= 0)
 // Press restart button
 if keyboard_check_pressed(ord("R"))
 { scr_slide_transition(TRANSITION_MODE.RESTART_GAME); }; // Restart game
+
+//if (keyboard_check_pressed(vk_escape) && global.pause == false) { global.pause = true; }		// Pause
+//else if (keyboard_check_pressed(vk_escape) && global.pause == true) { global.pause = false; };  // Unpause
+}

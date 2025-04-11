@@ -2,7 +2,14 @@
 if (colliding_with_player = true) // Cutscene trigger condition
 {
 	// Sprite
-	draw_sprite_ext(spr_cutscene_player, 0, width_half * 0.2, height_half * 0.4, 9, 9, 0, c_white, 1);
+	if (portrait == "Player") 
+	{
+		draw_sprite_ext(spr_cutscene_player, 0, width_half * 0.2, height_half * 0.4, 9, 9, 0, c_white, 1);
+	}
+	else if (portrait == "Chaser") 
+	{
+		draw_sprite_ext(spr_chaseWall_mouth, 0, width_half * 0.2, height_half * 0.4, 9, 9, 0, c_white, 1);
+	}
 	
 	// Bars (letterboxing)
 	draw_set_color(c_black);

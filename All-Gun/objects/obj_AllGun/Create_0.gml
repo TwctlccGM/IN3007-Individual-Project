@@ -25,7 +25,7 @@ recoil = 0; // Variable to control visual recoil (not kickback)
 
 // Load save data to see which modes were unlocked in previous levels
 //  *NOTE: At the moment, this causes shotgun to be available in the tutorial.
-var _map = scr_load_json("savegame.sav");
-unlocked_shotgun = ds_map_find_value(_map, "shotgun unlocked?");
-
-
+//var _map = scr_load_json("savegame.sav");
+//unlocked_shotgun = ds_map_find_value(_map, "shotgun unlocked?");
+//unlocked_laser = ds_map_find_value(_map, "laser unlocked?");
+//unlocked_rocket = ds_map_find_value(_map, "rocket unlocked?");

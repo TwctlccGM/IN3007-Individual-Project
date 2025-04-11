@@ -1,5 +1,5 @@
 /// @description
-if (tutorial_1 == true) // Cutscene trigger condition
+if (message_active == true) // Cutscene trigger condition
 {
 	// Bars
 	draw_set_color(c_black)
@@ -14,7 +14,7 @@ if (tutorial_1 == true) // Cutscene trigger condition
 	draw_text(width_half, height_half * 1.8, print);
 	
 	// Spacebar prompt
-	draw_sprite_ext(spr_graffiti_spacebar, 0, width_half * 1.3, height - 100, 1, 1, 0, c_white, 1);
+	//draw_sprite_ext(spr_graffiti_spacebar, 0, width_half * 1.3, height - 100, 1, 1, 0, c_white, 1);
 }
 
 

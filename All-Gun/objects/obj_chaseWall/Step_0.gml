@@ -1,6 +1,5 @@
 /// @description
-
-x += 2; // Move right
+//x += speed; // Move right
 
 
 

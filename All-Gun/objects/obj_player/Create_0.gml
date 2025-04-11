@@ -14,3 +14,5 @@ falling = false;		// If player is moving
 move_x = 0;				// Movement (horizontal)
 move_y = 0;				// Movement (vertical)
 
+global.pause = false;   // Pause boolean
+player_paused = false;  // Pause specifically for the player (used at level end cutscene)

@@ -3,6 +3,10 @@
 /// SAVE STATS
 if (level_ended == true)
 {
+	global.pause_enabled = false;
+	with (obj_chaseWall) { speed = 0; };
+	with (obj_player) { player_paused = true; };
+	
 	// Create map to store data in	
 	var _map = ds_map_create();
 	// var _level = room_get_name(room); // This will be used for storing multiple level stats later
@@ -42,36 +46,43 @@ if (room == rm_elevator) && (keyboard_check_pressed(vk_space))
 	{
 		case 1:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_2);
 			break;
 		}
 		case 2:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_3);
 			break;
 		}
 		case 3:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_4);
 			break;
 		}
 		case 4:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_5);
 			break;
 		}
 		case 5:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_6);
 			break;
 		}
 		case 6:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_boss);
 			break;
 		}
 		case 7:
 		{
+			global.pause_enabled = false;
 			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_end);
 			break;
 		}

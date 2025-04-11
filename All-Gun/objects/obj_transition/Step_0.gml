@@ -22,12 +22,14 @@ if (mode != TRANSITION_MODE.OFF)
 			case TRANSITION_MODE.INTRO:
 			{
 				mode = TRANSITION_MODE.OFF;
+				global.pause_enabled = false;
 				break;
 			}
 			// Transition to next room
 			case TRANSITION_MODE.NEXT:
 			{
 				mode = TRANSITION_MODE.INTRO;
+				global.pause_enabled = false;
 				room_goto_next();
 				break;
 			}
@@ -35,24 +37,28 @@ if (mode != TRANSITION_MODE.OFF)
 			case TRANSITION_MODE.GOTO:
 			{
 				mode = TRANSITION_MODE.INTRO;
+				global.pause_enabled = false;
 				room_goto(target);
 				break;
 			}
 			// Transition for restarting room
 			case TRANSITION_MODE.RESTART_ROOM:
 			{
+				global.pause_enabled = false;
 				room_restart();
 				break;
 			}
 			// Transition for restarting game
 			case TRANSITION_MODE.RESTART_GAME:
 			{
+				global.pause_enabled = false;
 				game_restart();
 				break;
 			}
 			// Transition for closing game
 			case TRANSITION_MODE.END:
 			{
+				global.pause_enabled = false;
 				game_end();
 				break;
 			}

@@ -6,24 +6,14 @@ height = display_get_gui_height();
 height_half = height / 2;
 width_half = width / 2;
 
-colliding_with_player = false; // Used to trigger cutscene
 current_level = 0;		// Used to know which level's message to display
-timer = 0;
+message_active = true;  // Use to turn off/on the message
+timer = 0;				// Used to progress dialogue at start of level
 
-draw_player = false; // Bool to tell cutscene when the player portrait should be on screen
-draw_chaser = false; // Bool to tell cutscene when the chase wall portrait should be on screen
-
-portrait = " "; // Used to store current portrait.
 str = " ";		// Used to store current string.
 print = " ";	// used to print current string...
 letter = 0;		// ...letter by letter...
 next_line = 0;  // ...and line by line.
-
-// Strings of dialogue, change these to change the dialogue
-// *NOTE: Use "\n" to put the same string on a new line
-//strings[0] = "First line of text";
-//strings[1] = "Second line of text";
-//strings[2] = "Third line\nof text";
 
 // Player is in a level, not elevator room
 if (room != rm_elevator)
@@ -36,31 +26,17 @@ if (room != rm_elevator)
 			current_level = 1;
 			// Strings of dialogue, change these to change the dialogue
 			// *NOTE: Use "\n" to put the same string on a new line
-			strings_level_portrait[0] = "Player";
-			strings_level_message[0] = "Alright! I made it to the elevator.";
-			
-			strings_level_portrait[1] = "Player";
-			strings_level_message[1] = "But I'm not out of the woods yet.";
-			
-			strings_level_portrait[2] = "Chaser";
-			strings_level_message[2] = "TERMINATE! TERMINATE! TERMINATE!";
-			
-			strings_level_portrait[3] = "Player";
-			strings_level_message[3] = "Uh oh. Better hurry!";
+			strings_level_message[0] = "If I'm going to escape this facility...";
+			strings_level_message[1] = "...I'll need to find and upgrade the All-Gun!";
+			strings_level_message[2] = "Good thing I installed the All-Gun's rifle mode [1] this morning.";
 			break;
 		}
 		case rm_level_2:
 		{
 			current_level = 2;
 			
-			strings_level_portrait[0] = "Player";
-			strings_level_message[0] = "Another room cleared!";
-			
-			strings_level_portrait[1] = "Chaser";
-			strings_level_message[1] = "[SCAN COMMENCING]";
-			
-			strings_level_portrait[2] = "Player";
-			strings_level_message[2] = "No idea what it's scanning, but I should get going.";
+			strings_level_message[0] = "If I swap to the shotgun mode with [2]...";
+			strings_level_message[1] = "...I can shoot downwards while jumping to propel myself!";
 			break;
 		}
 		case rm_level_3:

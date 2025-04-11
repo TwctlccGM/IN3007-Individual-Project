@@ -79,5 +79,10 @@ if (room != rm_elevator)
 			current_level = 7;
 			break;
 		}
+		case rm_level_end:
+		{
+			current_level = 8;
+			break;
+		}
 	}
 }

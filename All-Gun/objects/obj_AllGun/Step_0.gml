@@ -68,7 +68,7 @@ case ALLGUN_STATE.SHOTGUN:
 		
 		// Create projectiles
 		var _i = 0;
-		while (_i < 20) // Determines amount of projectiles
+		while (_i < 10) // Determines amount of projectiles
 		{
 			instance_create_layer(x + 3, y, "Projectiles", obj_bullet_player)
 			 _i++
