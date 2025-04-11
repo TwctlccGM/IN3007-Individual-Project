@@ -1,5 +1,10 @@
 /// @description
 
+width = display_get_gui_width();
+height = display_get_gui_height();
+height_half = height / 2;
+width_half = width / 2;
+
 // Manages AllGun modes
 enum ALLGUN_STATE
 {
@@ -21,7 +26,8 @@ shot_timer_rifle = 0;
 shot_timer_shotgun = 0; 
 //shot_timer_laser = 0; // Laser has no shot timer
 shot_timer_rocket = 0; 
-recoil = 0; // Variable to control visual recoil (not kickback)
+recoil = 0; // Variable to control visual recoil (not kickback)]
+offset = 15;
 
 // Load save data to see which modes were unlocked in previous levels
 //  *NOTE: At the moment, this causes shotgun to be available in the tutorial.

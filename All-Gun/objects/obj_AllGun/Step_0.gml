@@ -112,8 +112,11 @@ if (image_angle >= 90 && image_angle <= 270) { image_yscale = -1; } // Flips gun
 else { image_yscale = 1; } // Normal gun direction if facing right
 
 // Gun positioning (attached to player)
-x = obj_player.x;
-y = obj_player.y;
+//x = obj_player.x;
+//y = obj_player.y;
+
+x = obj_player.x + lengthdir_x(offset, image_angle);
+y = obj_player.y + lengthdir_y(offset, image_angle);
 
 // Move backwards when firing, depending on recoil
 x = x - lengthdir_x(recoil, image_angle);

@@ -83,7 +83,7 @@ if (room != rm_elevator)
 		{
 			current_level = 8;
 			
-			strings_level_message[0] = "You beat the AI, unlocked the power of the All-Gun, and escaped the facility!";
+			strings_level_message[0] = "You unlocked the power of the All-Gun, beat the AI, and escaped the facility!";
 			strings_level_message[1] = "Thanks for playing!";
 			strings_level_message[2] = "...did you get all the collectibles?";
 			break;

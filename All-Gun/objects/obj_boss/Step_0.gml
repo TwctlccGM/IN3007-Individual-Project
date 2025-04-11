@@ -44,7 +44,7 @@ if shot_timer <= 0
 if (health_points <= 0) 
 {
 	// Tell boss cutscene manager that the boss is dead
-	with (obj_cutscene_manager_boss) { boss_defeated = true; };
+	with (obj_cutscene_manager_levelend) { boss_defeated = true; };
 	instance_destroy(obj_chaseWall); // Destroy chase wall
 	instance_destroy(); // Destroy boss mouth
 };

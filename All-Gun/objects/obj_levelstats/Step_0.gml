@@ -15,13 +15,13 @@ if (level_ended == true)
 	ds_map_add(_map, "collectible", level_collectible_get);
 	ds_map_add(_map, "time", level_time);
 	ds_map_add(_map, "current level", current_level);
-	// AllGun modes unlocked
-	with (obj_AllGun)
-	{
-		ds_map_add(_map, "shotgun unlocked?", unlocked_shotgun);
-		ds_map_add(_map, "laser unlocked?", unlocked_laser);
-		ds_map_add(_map, "rocket unlocked?", unlocked_rocket);
-	}
+	// AllGun modes unlocked (unused)
+	//with (obj_AllGun)
+	//{
+	//	ds_map_add(_map, "shotgun unlocked?", unlocked_shotgun);
+	//	ds_map_add(_map, "laser unlocked?", unlocked_laser);
+	//	ds_map_add(_map, "rocket unlocked?", unlocked_rocket);
+	//}
 	
 	// Save to string
 	var _string = json_encode(_map);

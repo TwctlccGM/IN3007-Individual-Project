@@ -24,7 +24,7 @@
 }*/
 
 // Level Messages
-if (colliding_with_player = true) // Cutscene trigger condition
+if (colliding_with_player == true || boss_defeated == true) // Cutscene trigger condition
 {
 	with(obj_levelstats) { level_ended = true; };
 	timer++;

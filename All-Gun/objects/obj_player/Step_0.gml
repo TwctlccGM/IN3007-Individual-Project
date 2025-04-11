@@ -1,12 +1,15 @@
 /// @description Movement
 
 // Prevent player from doing stuff when they reach the level end cutscene
-if (!player_paused)
+if (room != rm_level_end && !player_paused)
 {
 /// Horizontal movement (Running)
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")); // Move left/right
 move_x *= move_speed; // Move horizontally based on move_speed
 
+/// Animations
+if (move_x != 0) { sprite_index = spr_player_run; }
+else { sprite_index = spr_player; };
 
 /// Vertical movement (Jumping)
 
@@ -21,17 +24,20 @@ if (place_meeting(x, y + 2, obj_wall)) // Checks if the player is on the ground
 		move_x = 0; // Stop horizontal movement
 	}
 }
+else { sprite_index = spr_player_jump; }
 
 coyote_time--; // Decrement this to prevent player jumping whenever they want
 
 if (coyote_time > 0) // Coyote time, so player can jump shortly after leaving the ground
 {
 	// Jump
-	if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"))) { move_y -= jump_speed; };
+	if (keyboard_check_pressed(ord("W"))) { move_y -= jump_speed; };
 }
 
 if (move_y < 10) // If in the air
-{ move_y += 1; } // Gravity
+{ 
+	move_y += 1; // Gravity
+}
 
 /// Falling and gun kickback
 // If falling
@@ -59,3 +65,4 @@ if keyboard_check_pressed(ord("R"))
 //if (keyboard_check_pressed(vk_escape) && global.pause == false) { global.pause = true; }		// Pause
 //else if (keyboard_check_pressed(vk_escape) && global.pause == true) { global.pause = false; };  // Unpause
 }
+else if (room = rm_level_end) { x += 2; }

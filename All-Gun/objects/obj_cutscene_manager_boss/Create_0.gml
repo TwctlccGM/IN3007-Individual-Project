@@ -15,7 +15,7 @@ next_line = 0;  // ...and line by line.
 
 // Strings of dialogue, change these to change the dialogue
 // *NOTE: Use "\n" to put the same string on a new line
-strings[0] = "That was a tough fight..."
+strings[0] = "In the end, that AI was no match for the real deal!"
 strings[1] = "...but I did it.";
 strings[2] = "I won!";
 

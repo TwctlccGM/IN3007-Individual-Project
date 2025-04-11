@@ -16,8 +16,7 @@ menu_selected = -1;
 menu_control = true;
 
 // Menu options
-menu[2] = "New Game";
-menu[1] = "Continue";
+menu[1] = "Start Game";
 menu[0] = "Quit";
 
 menu_items = array_length(menu);

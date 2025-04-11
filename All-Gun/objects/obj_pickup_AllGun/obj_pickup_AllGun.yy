@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_AllGun",
-    "path": "sprites/spr_AllGun/spr_AllGun.yy",
+    "name": "spr_AllGun_pickup",
+    "path": "sprites/spr_AllGun_pickup/spr_AllGun_pickup.yy",
   },
   "spriteMaskId": null,
   "visible": true,

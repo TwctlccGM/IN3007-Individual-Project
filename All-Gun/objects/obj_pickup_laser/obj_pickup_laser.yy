@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_shotgun",
-    "path": "sprites/spr_shotgun/spr_shotgun.yy",
+    "name": "spr_AllGun_laser",
+    "path": "sprites/spr_AllGun_laser/spr_AllGun_laser.yy",
   },
   "spriteMaskId": null,
   "visible": true,
