@@ -47,12 +47,14 @@ else { falling = false;}
 
 move_y += gunkickback_y; // Gun kickback
 
-move_and_collide(move_x, move_y, obj_wall, 8, 0, 0, move_speed, -1); // xy movement and collisions are calculated
+move_and_collide(move_x, move_y, obj_wall, 16, 0, 0, move_speed, -1); // xy movement and collisions are calculated
 
 gunkickback_y = 0; // Reset gunkickback
 
 if (instance_exists(obj_AllGun)) 
 { image_xscale = obj_AllGun.image_yscale * 2; }; // Face where the AllGun is being aimed
+else if (move_x != 0 && room = rm_menu) image_xscale = sign(move_x) * 4; // Make player face where they're moving on the menu screen
+else if (move_x != 0) image_xscale = sign(move_x) * 2; // Make player face where they're moving before obtaining the AllGun
 
 // Player death
 if (health_points <= 0)
@@ -65,4 +67,8 @@ if keyboard_check_pressed(ord("R"))
 //if (keyboard_check_pressed(vk_escape) && global.pause == false) { global.pause = true; }		// Pause
 //else if (keyboard_check_pressed(vk_escape) && global.pause == true) { global.pause = false; };  // Unpause
 }
-else if (room = rm_level_end) { x += 2; }
+if (room = rm_level_end) 
+{ 
+	x += 2; 
+	sprite_index = spr_player_run;
+}

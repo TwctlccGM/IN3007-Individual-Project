@@ -29,8 +29,8 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_wall_old",
+    "path": "sprites/spr_wall_old/spr_wall_old.yy",
   },
   "visible": true,
 }

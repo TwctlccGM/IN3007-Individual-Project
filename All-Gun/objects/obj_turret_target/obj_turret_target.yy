@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_bullet_enemy",
-    "path": "sprites/spr_bullet_enemy/spr_bullet_enemy.yy",
+    "name": "spr_bullet_enemy_old",
+    "path": "sprites/spr_bullet_enemy_old/spr_bullet_enemy_old.yy",
   },
   "spriteMaskId": null,
   "visible": false,

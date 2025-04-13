@@ -2,7 +2,7 @@
 
 // Enemy movement and gravity
 if (!place_meeting(x, y + 5, obj_wall)) { move_y += 1; } // In air
-if (place_meeting(x, y + 5, obj_wall))  { move_y = 0;  } // On ground
+if (place_meeting(x, y + 3, obj_wall))  { move_y = 0;  } // On ground
 if (place_meeting(x + 3, y, obj_wall))  { move_x = -3; } // Touching right wall
 if (place_meeting(x - 3, y, obj_wall))  { move_x = 3;  } // Touching left wall
 

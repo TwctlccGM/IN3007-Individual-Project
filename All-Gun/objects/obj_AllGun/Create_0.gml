@@ -16,6 +16,8 @@ enum ALLGUN_STATE
 
 state = ALLGUN_STATE.RIFLE; // Default mode is automatic rifle
 
+paused = false;
+
 // Initialise variables to lock modes
 unlocked_shotgun = false;
 unlocked_laser = false;

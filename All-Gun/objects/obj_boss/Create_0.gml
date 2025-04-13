@@ -1,7 +1,7 @@
 /// @description
 
 // Boss fight stuff
-max_health = 1000;		    // Max health used to draw full healthbar
+max_health = 900;		    // Max health used to draw full healthbar
 health_points = max_health; // Sets actual healthpoints based on max health
 shot_timer = 0;				// Delays shots from the boss
 hit_flash = 0;				// Hit flash timer

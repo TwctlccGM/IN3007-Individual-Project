@@ -1,5 +1,6 @@
 /// @description 
 // Initialise variables
+max_health = 3;
 health_points = 3;		// Health
 hit_flash = 0;			// Hitflash timer
 
@@ -14,5 +15,7 @@ falling = false;		// If player is moving
 move_x = 0;				// Movement (horizontal)
 move_y = 0;				// Movement (vertical)
 
-global.pause = false;   // Pause boolean
+//global.pause = false;   // Pause boolean (unused)
 player_paused = false;  // Pause specifically for the player (used at level end cutscene)
+
+health_colour = c_green; // For player health bar

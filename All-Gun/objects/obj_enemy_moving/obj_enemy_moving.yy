@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_enemy_moving",
+    "path": "sprites/spr_enemy_moving/spr_enemy_moving.yy",
   },
   "spriteMaskId": null,
   "visible": true,

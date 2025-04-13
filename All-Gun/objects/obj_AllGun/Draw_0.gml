@@ -1,6 +1,6 @@
 /// @description
 draw_self();
-switch (state)
+/*switch (state)
 			{
 			case ALLGUN_STATE.RIFLE:
 				draw_sprite(spr_AllGun_rifle, 0, obj_player.x, obj_player.y - 60)
@@ -17,7 +17,7 @@ switch (state)
 			case ALLGUN_STATE.ROCKET:
 				draw_sprite(spr_AllGun_rocket, 0, obj_player.x, obj_player.y - 60)
 				break;
-			}
+			}*/
 
 
 

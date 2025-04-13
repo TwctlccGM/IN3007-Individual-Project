@@ -15,7 +15,7 @@ if shot_timer <= 0
 	// Shot delay (60 frames = 1 second)
 	shot_timer = shot_speed;
 	// Create projectile
-	instance_create_layer(x, y, "Projectiles", obj_bullet_enemy); 
+	instance_create_layer(x, y - 12, "Projectiles", obj_bullet_enemy); 
 }
 
 // Enemy dies

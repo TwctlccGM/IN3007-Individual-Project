@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_elevator",
-    "path": "sprites/spr_elevator/spr_elevator.yy",
+    "name": "spr_elevator_old",
+    "path": "sprites/spr_elevator_old/spr_elevator_old.yy",
   },
   "spriteMaskId": null,
   "visible": true,

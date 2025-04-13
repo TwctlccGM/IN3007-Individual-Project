@@ -1,7 +1,7 @@
 /// @description
 
 // Boss position
-x = obj_chaseWall.x + 30; // Move horizontally with the chase wall itself
+x = obj_chaseWall.x + 65; // Move horizontally with the chase wall itself
 y = obj_player.y;		  // Move vertically with the player
 
 // Boss shooting
@@ -13,14 +13,14 @@ if shot_timer <= 0
 	// Create projectile
 	if (gun_mode <= 1) // Rifle
 	{
-		instance_create_layer(x, y, "Projectiles", obj_bullet_enemy_boss);
+		instance_create_layer(x + 40, y, "Projectiles", obj_bullet_enemy_boss);
 	}
 	else if (gun_mode <= 2) // Shotgun
 	{
 		var _i = 0;
 		while (_i < 10) // Determines amount of projectiles
 		{
-			instance_create_layer(x, y - 10 + _i * 2, "Projectiles", obj_bullet_enemy_boss);
+			instance_create_layer(x + 40, y - 10 + _i * 2, "Projectiles", obj_bullet_enemy_boss);
 			 _i++
 		}
 	}
@@ -29,13 +29,13 @@ if shot_timer <= 0
 		var _i = 0;
 		while (_i < 4) // Determines amount of projectiles
 		{
-			instance_create_layer(x + _i * 20, y, "Projectiles", obj_bullet_enemy_boss);
+			instance_create_layer(x + 40 + _i * 20, y, "Projectiles", obj_bullet_enemy_boss);
 			 _i++
 		}
 	}
 	else if (gun_mode <= 4) // Rocket
 	{
-		instance_create_layer(x, y, "Projectiles", obj_rocket_enemy);
+		instance_create_layer(x + 40, y, "Projectiles", obj_rocket_enemy);
 	}
 	gun_mode = random_range(0, 4)
 }

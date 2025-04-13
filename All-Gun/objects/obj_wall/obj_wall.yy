@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_wall_old",
+    "path": "sprites/spr_wall_old/spr_wall_old.yy",
   },
   "spriteMaskId": null,
   "visible": true,
