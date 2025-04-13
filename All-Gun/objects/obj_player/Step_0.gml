@@ -1,7 +1,7 @@
 /// @description Movement
 
 // Prevent player from doing stuff when they reach the level end cutscene
-if (room != rm_level_end && !player_paused)
+if (room != rm_level_end && room != rm_elevator && !player_paused)
 {
 /// Horizontal movement (Running)
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")); // Move left/right
@@ -56,17 +56,23 @@ if (instance_exists(obj_AllGun))
 else if (move_x != 0 && room = rm_menu) image_xscale = sign(move_x) * 4; // Make player face where they're moving on the menu screen
 else if (move_x != 0) image_xscale = sign(move_x) * 2; // Make player face where they're moving before obtaining the AllGun
 
+//if (keyboard_check_pressed(vk_escape) && global.pause == false) { global.pause = true; }		// Pause
+//else if (keyboard_check_pressed(vk_escape) && global.pause == true) { global.pause = false; };  // Unpause
+}
+
 // Player death
 if (health_points <= 0)
-{ scr_slide_transition(TRANSITION_MODE.RESTART_ROOM); }; // Restart room
+{ 
+	if (!place_meeting(x, y, obj_wall)) { move_y += 1; };
+	player_paused = true; // Freeze player
+	sprite_index = spr_player_dead; // Change sprite
+	scr_slide_transition(TRANSITION_MODE.RESTART_ROOM); // Restart room
+};
 
 // Press restart button
 if keyboard_check_pressed(ord("R"))
 { scr_slide_transition(TRANSITION_MODE.RESTART_GAME); }; // Restart game
 
-//if (keyboard_check_pressed(vk_escape) && global.pause == false) { global.pause = true; }		// Pause
-//else if (keyboard_check_pressed(vk_escape) && global.pause == true) { global.pause = false; };  // Unpause
-}
 if (room = rm_level_end) 
 { 
 	x += 2; 

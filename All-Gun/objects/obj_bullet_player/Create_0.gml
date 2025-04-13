@@ -7,5 +7,5 @@ image_angle = direction; // Makes sprite direction match movement direction
 speed = 20 // Moves in a straight line at this speed
 
 damage_enemy = 2; // How much damage it deals to enemies
-damage_wall = 1; // How much damage it deals to walls
+damage_wall = 3; // How much damage it deals to walls
 damage_hitflash = 2; // How long a hit object flashes white for

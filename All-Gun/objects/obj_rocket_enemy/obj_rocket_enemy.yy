@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rocket_enemy_old",
-    "path": "sprites/spr_rocket_enemy_old/spr_rocket_enemy_old.yy",
+    "name": "spr_rocket_enemy",
+    "path": "sprites/spr_rocket_enemy/spr_rocket_enemy.yy",
   },
   "spriteMaskId": null,
   "visible": true,

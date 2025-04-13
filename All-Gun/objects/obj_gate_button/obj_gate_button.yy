@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_gate_button_old",
-    "path": "sprites/spr_gate_button_old/spr_gate_button_old.yy",
+    "name": "spr_gate_button",
+    "path": "sprites/spr_gate_button/spr_gate_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

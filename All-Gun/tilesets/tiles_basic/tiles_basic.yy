@@ -35,8 +35,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "spr_tileset",
-    "path": "sprites/spr_tileset/spr_tileset.yy",
+    "name": "spr_tileset_basic",
+    "path": "sprites/spr_tileset_basic/spr_tileset_basic.yy",
   },
   "spriteNoExport": false,
   "textureGroupId": {

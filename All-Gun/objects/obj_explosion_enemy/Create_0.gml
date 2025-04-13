@@ -6,7 +6,8 @@ damage_enemy = 1; // Damage dealt to enemies
 damage_wall = 1; // Damage dealt to walls
 damage_hitflash = 1; // How long a hit object flashes white for
 
-
+image_xscale = 4;
+image_yscale = 4;
 
 
 

@@ -2,7 +2,7 @@
 
 // Camera
 camera_set_view_pos(view_camera[0], x_position, 180); // Set camera to viewport 0
-x_position = max(x_position - 0.5, 0); // Move camera left slowly
+x_position = max(x_position + 0.5, 0); // Move camera left slowly
 
 // Draws letters of a sentence one by one
 letter += 0.5; // Time it takes for each letter (Bigger number = Faster)
@@ -12,7 +12,7 @@ print = string_copy(str, 1, letter);
 if (keyboard_check_pressed(vk_space)) && (next_line == array_length(strings) - 1)
 {
 	// Go to next room
-	scr_slide_transition(TRANSITION_MODE.NEXT);
+	scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_1);
 }
 	
 // If there is another line of dialogue waiting...

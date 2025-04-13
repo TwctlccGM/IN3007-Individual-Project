@@ -17,3 +17,18 @@ y = clamp(y, view_height_half, room_height - view_height_half);
 
 // Update camera view
 camera_set_view_pos(cam, x - view_width_half, y - view_height_half);
+
+if (layer_exists("Backgrounds_Boxes"))
+{
+	layer_x("Backgrounds_Boxes", x / 6);	
+};
+
+if (layer_exists("Backgrounds_Pillars"))
+{
+	layer_x("Backgrounds_Pillars", x / 4);	
+};
+
+if (layer_exists("Backgrounds_Wall"))
+{
+	//layer_x("Backgrounds_Wall", x / 2);	
+};
