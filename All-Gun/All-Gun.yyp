@@ -216,6 +216,7 @@
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_level_end","path":"rooms/rm_level_end/rm_level_end.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_introcutscene","path":"rooms/rm_introcutscene/rm_introcutscene.yy",},},
     {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
@@ -225,7 +226,6 @@
     {"roomId":{"name":"rm_level_5","path":"rooms/rm_level_5/rm_level_5.yy",},},
     {"roomId":{"name":"rm_level_6","path":"rooms/rm_level_6/rm_level_6.yy",},},
     {"roomId":{"name":"rm_level_boss","path":"rooms/rm_level_boss/rm_level_boss.yy",},},
-    {"roomId":{"name":"rm_level_end","path":"rooms/rm_level_end/rm_level_end.yy",},},
     {"roomId":{"name":"rm_elevator","path":"rooms/rm_elevator/rm_elevator.yy",},},
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_test2","path":"rooms/rm_test2/rm_test2.yy",},},

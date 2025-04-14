@@ -96,17 +96,17 @@ if (room != rm_level_end && room != rm_elevator)
 if (room == rm_elevator)
 {
 	// Black box
-	draw_sprite_ext(spr_blackbar, 0, width * 0.75, height * 0.4, 4, 3, 0, c_black, 1);
+	draw_sprite_ext(spr_blackbar, 0, width * 0.65, height * 0.4, 4, 3, 0, c_black, 1);
 	
 	// Text
 	draw_set_font(fnt_cutscene);
 	draw_set_color(c_white);
-	draw_text(width * 0.80, height * 0.41, "Level Time: ");
-	draw_text(width * 0.85, height * 0.41, print_time);
-	draw_text(width * 0.80, height * 0.47, "Collectible: ");
-	draw_text(width * 0.85, height * 0.47, print_collectible);
-	draw_text(width * 0.80, height * 0.53, "Rank: ");
-	draw_text(width * 0.85, height * 0.53, rank);
+	draw_text(width * 0.70, height * 0.41, "Level Time: ");
+	draw_text(width * 0.75, height * 0.41, print_time);
+	draw_text(width * 0.70, height * 0.47, "Collectible: ");
+	draw_text(width * 0.75, height * 0.47, print_collectible);
+	draw_text(width * 0.70, height * 0.53, "Rank: ");
+	draw_text(width * 0.75, height * 0.53, rank);
 }
 
 
