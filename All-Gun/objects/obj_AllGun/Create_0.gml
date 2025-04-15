@@ -37,3 +37,5 @@ offset = 15;
 //unlocked_shotgun = ds_map_find_value(_map, "shotgun unlocked?");
 //unlocked_laser = ds_map_find_value(_map, "laser unlocked?");
 //unlocked_rocket = ds_map_find_value(_map, "rocket unlocked?");
+
+flag_audio_AllGun_laser = 0;

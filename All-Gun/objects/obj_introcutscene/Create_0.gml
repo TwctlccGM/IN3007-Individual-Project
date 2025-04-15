@@ -20,6 +20,6 @@ strings[1] = "But then, \na rogue AI killed everyone.";
 strings[2] = "Now I have to get out of here \nusing my own invention...";
 strings[3] = "the \nALL-GUN.";
 
-
+flag_audio_cutscene_next_line = 0;
 
 

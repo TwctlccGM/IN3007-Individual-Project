@@ -35,7 +35,15 @@ if _collide != noone
 	}
 }*/
 
-if mouse_check_button_released(mb_left) { instance_destroy(self); };
+if mouse_check_button_released(mb_left) 
+{ 
+	with (obj_AllGun) 
+	{ 
+		audio_stop_sound(snd_AllGun_laser);
+		flag_audio_AllGun_laser = 0; 
+	};
+	instance_destroy(self); 
+};
 
 
 

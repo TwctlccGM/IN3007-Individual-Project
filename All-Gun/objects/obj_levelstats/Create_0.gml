@@ -9,10 +9,11 @@ width_half = width / 2;
 level_ended = false; // Trigger for saving data (in Step event)
 
 // Initialise variables
-level_collectible_get = 0; 
+level_collectible_get = "Nope"; 
 level_time = 0;
 level_time_decimal = 0;
 current_level = 0;
+rank_points = 1000;
 rank = "None";
 
 /// LOAD STATS
@@ -33,9 +34,12 @@ if (room == rm_elevator)
 	print_level = string(current_level);
 	
 	// Ranking system based on time spent in level
-	if (level_time <= 10) { rank = "A"; }
-	else if (level_time > 10 && level_time <= 30) { rank = "B"; }
-	else if (level_time > 30) { rank = "C"; }
+	if (level_collectible_get == "Yep") { rank_points += 510 }; // Collectible gives rank points
+	rank_points -= level_time * 10;							   // Level time reduces rank points
+	
+	if (rank_points >= 1000) { rank = "A"; }
+	else if (rank_points < 1000 && rank_points >= 500) { rank = "B"; }
+	else if (level_time < 500) { rank = "C"; }
 }
 
 // Player is in a level, not elevator room

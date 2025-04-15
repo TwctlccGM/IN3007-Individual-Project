@@ -17,6 +17,8 @@ print = " ";	// used to print current string...
 letter = 0;		// ...letter by letter...
 next_line = 0;  // ...and line by line.
 
+flag_audio_cutscene_next_line = 0;
+
 // Strings of dialogue, change these to change the dialogue
 // *NOTE: Use "\n" to put the same string on a new line
 //strings[0] = "First line of text";

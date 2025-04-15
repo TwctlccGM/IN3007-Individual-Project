@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_graffiti_W",
-  "bbox_bottom": 63,
-  "bbox_left": 5,
-  "bbox_right": 61,
-  "bbox_top": 6,
+  "bbox_bottom": 24,
+  "bbox_left": 2,
+  "bbox_right": 29,
+  "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -15,9 +15,9 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a54450b5-3f4c-4f57-af5f-33cf306c47c5",},
   ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 64,
+  "gridX": 8,
+  "gridY": 8,
+  "height": 32,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e68a0688-cd46-4bf9-90a9-b037f7bd48d6","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a54450b5-3f4c-4f57-af5f-33cf306c47c5","path":"sprites/spr_graffiti_W/spr_graffiti_W.yy",},},},"Disabled":false,"id":"56c68b77-16d4-4b9d-a685-0f0b5d291fff","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a54450b5-3f4c-4f57-af5f-33cf306c47c5","path":"sprites/spr_graffiti_W/spr_graffiti_W.yy",},},},"Disabled":false,"id":"c7f7053e-e1b9-469a-a82e-eb7662548ff6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 32,
 }

@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_graffiti_hover",
-  "bbox_bottom": 62,
-  "bbox_left": 0,
-  "bbox_right": 63,
-  "bbox_top": 1,
+  "bbox_bottom": 63,
+  "bbox_left": 16,
+  "bbox_right": 49,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2dfc477-a24a-4889-a547-784ce48350e5","path":"sprites/spr_graffiti_hover/spr_graffiti_hover.yy",},},},"Disabled":false,"id":"4e62406a-291d-447a-9632-5124283c6425","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2dfc477-a24a-4889-a547-784ce48350e5","path":"sprites/spr_graffiti_hover/spr_graffiti_hover.yy",},},},"Disabled":false,"id":"46fa842e-0073-4695-a4a5-d4afd5083750","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

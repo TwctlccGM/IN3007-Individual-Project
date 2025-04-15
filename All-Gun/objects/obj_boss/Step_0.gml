@@ -13,10 +13,12 @@ if shot_timer <= 0
 	// Create projectile
 	if (gun_mode <= 1) // Rifle
 	{
+		audio_play_sound(snd_AllGun_rifle, 0, 0);
 		instance_create_layer(x + 40, y, "Projectiles", obj_bullet_enemy_boss);
 	}
 	else if (gun_mode <= 2) // Shotgun
 	{
+		audio_play_sound(snd_AllGun_shotgun, 0, 0);
 		var _i = 0;
 		while (_i < 10) // Determines amount of projectiles
 		{
@@ -26,6 +28,7 @@ if shot_timer <= 0
 	}
 	else if (gun_mode <= 3) // Laser
 	{
+		audio_play_sound(snd_AllGun_laser, 0, 0);
 		var _i = 0;
 		while (_i < 4) // Determines amount of projectiles
 		{
@@ -35,6 +38,7 @@ if shot_timer <= 0
 	}
 	else if (gun_mode <= 4) // Rocket
 	{
+		audio_play_sound(snd_AllGun_rocket, 0, 0);
 		instance_create_layer(x + 40, y, "Projectiles", obj_rocket_enemy);
 	}
 	gun_mode = random_range(0, 4)

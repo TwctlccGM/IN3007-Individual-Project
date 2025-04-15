@@ -24,6 +24,8 @@ if (room != rm_elevator)
 		case rm_level_1:
 		{
 			current_level = 1;
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			// Strings of dialogue, change these to change the dialogue
 			// *NOTE: Use "\n" to put the same string on a new line
 			strings_level_message[0] = "If I'm going to escape this facility...";
@@ -34,7 +36,8 @@ if (room != rm_elevator)
 		case rm_level_2:
 		{
 			current_level = 2;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "If I swap to the shotgun mode with [2]...";
 			strings_level_message[1] = "...I can shoot downwards while jumping to propel myself!";
 			break;
@@ -42,7 +45,8 @@ if (room != rm_elevator)
 		case rm_level_3:
 		{
 			current_level = 3;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "The laser mode [3] is great for damage and precision...";
 			strings_level_message[1] = "...just gotta remember to hold the trigger!";
 			break;
@@ -50,7 +54,8 @@ if (room != rm_elevator)
 		case rm_level_4:
 		{
 			current_level = 4;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "Rockets [4] can explode to hit through walls...";
 			strings_level_message[1] = "...or blast through cracked walls instantly!";
 			break;
@@ -58,7 +63,8 @@ if (room != rm_elevator)
 		case rm_level_5:
 		{
 			current_level = 5;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "With the All-Gun fully upgraded...";
 			strings_level_message[1] = "...I'll be out of this place in no time!";
 			break;
@@ -66,7 +72,8 @@ if (room != rm_elevator)
 		case rm_level_6:
 		{
 			current_level = 6;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "What would I do without the rifle mode's hover?";
 			strings_level_message[1] = "...probably just die.";
 			break;
@@ -74,7 +81,8 @@ if (room != rm_elevator)
 		case rm_level_boss:
 		{
 			current_level = 7;
-			
+			audio_stop_sound(snd_music_1);
+			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "Gotta shoot the giant AI, dodge his attacks,\n and make it to the exit!";
 			strings_level_message[1] = "...I'd better get a raise for this.";
 			break;
@@ -82,10 +90,10 @@ if (room != rm_elevator)
 		case rm_level_end:
 		{
 			current_level = 8;
-			
+			audio_stop_sound(snd_music_1);
 			strings_level_message[0] = "You unlocked the power of the All-Gun, beat the AI, and escaped the facility!";
 			strings_level_message[1] = "Thanks for playing!";
-			strings_level_message[2] = "...did you get all the collectibles?";
+			strings_level_message[2] = "...did you find all the research documents?";
 			break;
 		}
 	}

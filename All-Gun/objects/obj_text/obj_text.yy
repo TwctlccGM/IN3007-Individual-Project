@@ -1,17 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_cutscene_manager_boss",
+  "name": "obj_text",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Cutscene Objects",
-    "path": "folders/Objects/Cutscene Objects.yy",
+    "name": "Hidden Objects",
+    "path": "folders/Objects/Hidden Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_levelend",
-    "path": "sprites/spr_levelend/spr_levelend.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

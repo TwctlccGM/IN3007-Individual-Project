@@ -40,50 +40,85 @@ else if (room != rm_elevator)
 };
 	
 // Press Spacebar to go to next level
-if (room == rm_elevator) && (keyboard_check_pressed(vk_space))
+if (room == rm_elevator)
 {
 	switch(current_level)
 	{
 		case 1:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_2);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_1); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_2);  // Go to next level
+			};
 			break;
 		}
 		case 2:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_3);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_2); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_3);  // Go to next level
+			};
 			break;
 		}
 		case 3:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_4);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_3); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_4);  // Go to next level
+			};
 			break;
 		}
 		case 4:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_5);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_4); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_5);  // Go to next level
+			};
 			break;
 		}
 		case 5:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_6);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_5); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_6);  // Go to next level
+			};
 			break;
 		}
 		case 6:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_boss);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_6); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_boss);  // Go to next level
+			};
 			break;
 		}
 		case 7:
 		{
-			global.pause_enabled = false;
-			scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_end);
+			if keyboard_check_pressed(ord("R"))
+			{ scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_boss); }; // Retry level
+			if keyboard_check_pressed(vk_space)
+			{ 
+				audio_play_sound(snd_next_level, 0, 0)
+				scr_slide_transition(TRANSITION_MODE.GOTO, rm_level_end);  // Go to next level
+			};
 			break;
 		}
 	}

@@ -19,3 +19,7 @@ move_y = 0;				// Movement (vertical)
 player_paused = false;  // Pause specifically for the player (used at level end cutscene)
 
 health_colour = c_green; // For player health bar
+
+// Audio flags (to prevent repeated audio)
+flag_audio_player_death = 0;
+flag_audio_player_walk = 0;

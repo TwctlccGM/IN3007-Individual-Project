@@ -8,16 +8,16 @@ if (!paused)
 
 	// Rifle
 	if keyboard_check(ord("1")) && state != ALLGUN_STATE.RIFLE		
-	{ state = ALLGUN_STATE.RIFLE; };
+	{ state = ALLGUN_STATE.RIFLE; audio_stop_sound(snd_AllGun_laser); flag_audio_AllGun_laser = 0;};
 	// Shotgun
 	if keyboard_check(ord("2")) && state != ALLGUN_STATE.SHOTGUN	&& unlocked_shotgun == true
-	{ state = ALLGUN_STATE.SHOTGUN;	};
+	{ state = ALLGUN_STATE.SHOTGUN;	audio_stop_sound(snd_AllGun_laser); flag_audio_AllGun_laser = 0;};
 	// Laser
 	if keyboard_check(ord("3")) && state != ALLGUN_STATE.LASERBEAM  && unlocked_laser == true
 	{ state = ALLGUN_STATE.LASERBEAM; };
 	// Rocket
 	if keyboard_check(ord("4")) && state != ALLGUN_STATE.ROCKET		&& unlocked_rocket == true
-	{ state = ALLGUN_STATE.ROCKET; };
+	{ state = ALLGUN_STATE.ROCKET; audio_stop_sound(snd_AllGun_laser); flag_audio_AllGun_laser = 0;};
 
 	// Decrement shot timers to allow firing again
 	shot_timer_rifle--;
@@ -33,6 +33,7 @@ if (!paused)
 	case ALLGUN_STATE.RIFLE:
 		if mouse_check_button(mb_left) && shot_timer_rifle <= 0 // Fire rifle
 		{
+			audio_play_sound(snd_AllGun_rifle, 0, 0);
 			var _default_gunkickback_y = 1;  // Bigger number = Increased knockback
 			shot_timer_rifle = 3;			 // Bigger number = Longer cooldown
 			recoil = 3;						 // Bigger number = Bigger visual recoil
@@ -55,6 +56,7 @@ if (!paused)
 	case ALLGUN_STATE.SHOTGUN:
 		if mouse_check_button(mb_left) && shot_timer_shotgun <= 0 // Fire shotgun
 		{
+			audio_play_sound(snd_AllGun_shotgun, 0, 0);
 			var _default_gunkickback_y = 15; // Bigger number = Increased knockback
 			shot_timer_shotgun = 30;		 // Bigger number = Longer cooldown
 			recoil = 10;					 // Bigger number = Bigger visual recoil
@@ -82,6 +84,12 @@ if (!paused)
 	case ALLGUN_STATE.LASERBEAM:
 		if mouse_check_button(mb_left) // Fire laser
 		{
+			if (flag_audio_AllGun_laser = 0)
+			{
+				audio_play_sound(snd_AllGun_laser, 0, 999);
+				flag_audio_AllGun_laser = 1
+			}
+			
 			// Laser has no kickback, recoil, and fires every frame (no shot_timer)
 			recoil = 0;
 		
@@ -93,6 +101,7 @@ if (!paused)
 	case ALLGUN_STATE.ROCKET:
 		if mouse_check_button(mb_left) && shot_timer_rocket <= 0 // Fire rocket
 		{
+			audio_play_sound(snd_AllGun_rocket, 0, 0);
 			// Rocket has no kickback
 			shot_timer_rocket = 60; // Bigger number = Longer cooldown
 			recoil = 10;			// Bigger number = Bigger visual recoil

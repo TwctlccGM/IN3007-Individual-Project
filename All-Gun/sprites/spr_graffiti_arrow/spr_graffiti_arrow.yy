@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_graffiti_arrow",
-  "bbox_bottom": 63,
-  "bbox_left": 13,
-  "bbox_right": 50,
+  "bbox_bottom": 30,
+  "bbox_left": 1,
+  "bbox_right": 30,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -15,9 +15,9 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3a0f291-2eea-485f-b84c-fc1a6fdd2f3f",},
   ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 64,
+  "gridX": 8,
+  "gridY": 8,
+  "height": 32,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"545905e7-d9dc-4bf9-8cb3-e6c545599abd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3a0f291-2eea-485f-b84c-fc1a6fdd2f3f","path":"sprites/spr_graffiti_arrow/spr_graffiti_arrow.yy",},},},"Disabled":false,"id":"e0f25ec6-b3b1-4fcc-b71b-85826934aa8f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3a0f291-2eea-485f-b84c-fc1a6fdd2f3f","path":"sprites/spr_graffiti_arrow/spr_graffiti_arrow.yy",},},},"Disabled":false,"id":"8d8a5b12-a11e-4830-a222-dc6b25bc3448","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 32,
 }
