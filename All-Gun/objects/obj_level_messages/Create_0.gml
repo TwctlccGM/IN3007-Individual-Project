@@ -91,9 +91,16 @@ if (room != rm_elevator)
 		{
 			current_level = 8;
 			audio_stop_sound(snd_music_1);
-			strings_level_message[0] = "You unlocked the power of the All-Gun, beat the AI, and escaped the facility!";
+			strings_level_message[0] = "You unlocked the power of the All-Gun, \nbeat the AI, \nand escaped the facility!";
 			strings_level_message[1] = "Thanks for playing!";
-			strings_level_message[2] = "...did you find all the research documents?";
+			strings_level_message[2] = "Programming\nby Twctlcc";
+			strings_level_message[3] = "Artwork\nby Twctlcc";
+			strings_level_message[4] = "Audio\nby Twctlcc\n(made in BeepBox)";
+			strings_level_message[5] = "Special Thanks:"
+			strings_level_message[6] = "Sara Spalding for her helpful \n'Complete Platformer Tutorial' series";
+			strings_level_message[7] = "Reece Geofroy for his \n'How To Pixel Art - Beginner To PRO Tutorial' video";
+			strings_level_message[8] = "GameMaker community forums for \ntheir helpful advice";
+			strings_level_message[9] = "Made in \nGameMaker Studio 2";
 			break;
 		}
 	}

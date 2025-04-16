@@ -7,29 +7,33 @@ if (level_ended == true)
 	with (obj_chaseWall) { speed = 0; };
 	with (obj_player) { player_paused = true; };
 	
-	// Create map to store data in	
-	var _map = ds_map_create();
-	// var _level = room_get_name(room); // This will be used for storing multiple level stats later
+	if (flag_stop_duplicate_saving == 0)
+	{
+		// Create map to store data in	
+		var _map = ds_map_create();
+		// var _level = room_get_name(room); // This will be used for storing multiple level stats later
 	
-	// Add data from variables to map
-	ds_map_add(_map, "collectible", level_collectible_get);
-	ds_map_add(_map, "time", level_time);
-	ds_map_add(_map, "current level", current_level);
-	// AllGun modes unlocked (unused)
-	//with (obj_AllGun)
-	//{
-	//	ds_map_add(_map, "shotgun unlocked?", unlocked_shotgun);
-	//	ds_map_add(_map, "laser unlocked?", unlocked_laser);
-	//	ds_map_add(_map, "rocket unlocked?", unlocked_rocket);
-	//}
+		// Add data from variables to map
+		ds_map_add(_map, "collectible", level_collectible_get);
+		ds_map_add(_map, "time", level_time);
+		ds_map_add(_map, "current level", current_level);
+		// AllGun modes unlocked (unused)
+		//with (obj_AllGun)
+		//{
+		//	ds_map_add(_map, "shotgun unlocked?", unlocked_shotgun);
+		//	ds_map_add(_map, "laser unlocked?", unlocked_laser);
+		//	ds_map_add(_map, "rocket unlocked?", unlocked_rocket);
+		//}
 	
-	// Save to string
-	var _string = json_encode(_map);
-	// This script saves the string to a save file
-	scr_save_string("savegame.sav", _string);
+		// Save to string
+		var _string = json_encode(_map);
+		// This script saves the string to a save file
+		scr_save_string("savegame.sav", _string);
 	
-	// Delete the map, its data has been saved so the map is no longer needed
-	ds_map_destroy(_map);
+		// Delete the map, its data has been saved so the map is no longer needed
+		ds_map_destroy(_map);
+		flag_stop_duplicate_saving = 1;
+	}
 }
 else if (room != rm_elevator)
 { 

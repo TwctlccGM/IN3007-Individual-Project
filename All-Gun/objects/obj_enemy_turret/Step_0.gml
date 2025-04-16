@@ -7,7 +7,8 @@
 //if (place_meeting(x - 3, y, obj_floor))  { move_x = 3;  } // Touching left wall
 
 // move_and_collide(move_x, move_y, obj_wall, 4, 0, 0, move_speed, -1); // Calculate movement
-
+if(point_distance(x,y,obj_player.x,obj_player.y) < turret_distance)
+{ visible = true;
 with(obj_turret_target) 
 {
 	// The 'target' and 'turret' variables are created in the objects 'Creation Code' in the room editor itself.
@@ -41,7 +42,7 @@ if shot_burst_amount <= 0 && shot_burst_total != 0
 
 // Enemy dies
 if (health_points <= 0) { instance_destroy() };
-
-
+}
+else { visible = false; };
 
 

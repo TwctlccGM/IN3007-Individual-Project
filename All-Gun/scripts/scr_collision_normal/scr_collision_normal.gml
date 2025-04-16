@@ -16,7 +16,7 @@
     ///
     /// GMLscripts.com/license
      
-    function collision_normal(x, y, obj, radius=4, spacing=1)
+  /*  function collision_normal(x, y, obj, radius=4, spacing=1)
     {
         var nx = 0;
         var ny = 0;
@@ -35,4 +35,4 @@
             return point_direction(0, 0, nx, ny);
         }
         return (-1);
-    }
+    } */

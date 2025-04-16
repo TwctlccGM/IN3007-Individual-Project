@@ -40,7 +40,7 @@ if (colliding_with_player = true || boss_defeated == true) // Cutscene trigger c
 	}
 	
 	with (obj_AllGun) { paused = true; };
+	with (obj_chaseWall) { paused = true; };
 }
-
 
 

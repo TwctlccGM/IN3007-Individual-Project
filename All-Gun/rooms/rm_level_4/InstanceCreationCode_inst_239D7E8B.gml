@@ -1,0 +1,1 @@
+wall_speed = 2;

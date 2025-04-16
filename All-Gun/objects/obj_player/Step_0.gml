@@ -3,6 +3,25 @@
 // Prevent player from doing stuff when they reach the level end cutscene
 if (room != rm_level_end && room != rm_elevator && !player_paused)
 {
+	if (hit == true && invincible == false) 
+	{ 
+		invincible = true; 
+		audio_play_sound(snd_player_hit, 0, 0);
+		health_points -= 1; // Damage health
+		hit_flash = 3;      // Apply hitflash
+	};
+	
+	if (invincible == true) 
+	{ 
+		hit = false;
+		iframe_timer++;
+		if (iframe_timer >= 60)
+		{
+			invincible = false;
+			iframe_timer = 0;
+		}
+	}
+
 /// Horizontal movement (Running)
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")); // Move left/right
 move_x *= move_speed; // Move horizontally based on move_speed

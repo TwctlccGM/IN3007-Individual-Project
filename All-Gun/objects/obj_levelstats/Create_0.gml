@@ -7,6 +7,7 @@ height_half = height / 2;
 width_half = width / 2;
 
 level_ended = false; // Trigger for saving data (in Step event)
+flag_stop_duplicate_saving = 0; // Prevents saving data every frame, increases performance during level end cutscene
 
 // Initialise variables
 level_collectible_get = "Nope"; 

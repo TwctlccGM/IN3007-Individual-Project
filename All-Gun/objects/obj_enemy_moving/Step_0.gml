@@ -1,5 +1,7 @@
 /// @description
 
+if(point_distance(x,y,obj_player.x,obj_player.y) < 2000)
+{ visible = true;
 // Enemy movement and gravity
 if (!place_meeting(x, y + 5, obj_wall)) { move_y += 1; } // In air
 if (place_meeting(x, y + 3, obj_wall))  { move_y = 0;  } // On ground
@@ -20,7 +22,7 @@ if shot_timer <= 0
 
 // Enemy dies
 if (health_points <= 0) { instance_destroy() };
-
-
+}
+else { visible = false; };
 
 
