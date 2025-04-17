@@ -37,6 +37,156 @@ if (room != rm_elevator)
 			// Strings of dialogue, change these to change the dialogue
 			// *NOTE: Use "\n" to put the same string on a new line
 			strings_level_portrait[0] = "Player";
+			strings_level_message[0] = "Alright! I made it to the first elevator.";
+			
+			strings_level_portrait[1] = "Player";
+			strings_level_message[1] = "And I wouldn't have made it without the-";
+			
+			strings_level_portrait[2] = "Chaser";
+			strings_level_message[2] = "FEEBLE HUMAN\nYOUR TOY GUN WILL NOT SAVE YOU";
+			
+			strings_level_portrait[3] = "Player";
+			strings_level_message[3] = "Uh oh.";
+			break;
+		}
+		case rm_level_2:
+		{
+			current_level = 2;
+			
+			strings_level_portrait[0] = "Player";
+			strings_level_message[0] = "Another floor cleared!";
+			
+			strings_level_portrait[1] = "Chaser";
+			strings_level_message[1] = "RESISTANCE IS FUTILE\n[ALL-GUN] IS NO MATCH FOR [ME]";
+			
+			strings_level_portrait[2] = "Player";
+			strings_level_message[2] = "What're you gonna do?\n Move slowly towards me?";
+			
+			strings_level_portrait[3] = "Chaser";
+			strings_level_message[3] = "YOU CANNOT RUN FROM [ME] FOREVER";
+			break;
+		}
+		case rm_level_3:
+		{
+			current_level = 3;
+			
+			strings_level_portrait[0] = "Player";
+			strings_level_message[0] = "This laser mode is pretty sweet.";
+			
+			strings_level_portrait[1] = "Chaser";
+			strings_level_message[1] = "HUMAN MOBILITY DEFIES PREVIOUS ESTIMATIONS\nSCAN COMMENCING";
+			
+			strings_level_portrait[2] = "Player";
+			strings_level_message[2] = "They called my gun a failure, \nbut who's laughing now?";
+			
+			strings_level_portrait[3] = "Chaser";
+			strings_level_message[3] = "SCAN AT 10% COMPLETION";
+			
+			strings_level_portrait[4] = "Player";
+			strings_level_message[4] = "Better pick up the pace.";
+			break;
+		}
+		case rm_level_4:
+		{
+			current_level = 4;
+			
+			strings_level_portrait[0] = "Chaser";
+			strings_level_message[0] = "SCAN AT 40% COMPLETION.";
+			
+			strings_level_portrait[1] = "Player";
+			strings_level_message[1] = "If you can talk, \ncan you say something nice?";
+			
+			strings_level_portrait[2] = "Chaser";
+			strings_level_message[2] = "NO";
+			
+			strings_level_portrait[3] = "Player";
+			strings_level_message[3] = "...can you stop chasing me?";
+			
+			strings_level_portrait[4] = "Chaser";
+			strings_level_message[4] = "NO";
+			
+			strings_level_portrait[5] = "Player";
+			strings_level_message[5] = "Well it was worth a shot.";
+			break;
+		}
+		case rm_level_5:
+		{
+			current_level = 5;
+			
+			strings_level_portrait[0] = "Player";
+			strings_level_message[0] = "You know,you never explained \nWHY \nyou're chasing me in the first place.";
+			
+			strings_level_portrait[1] = "Chaser";
+			strings_level_message[1] = "THE GREATEST INVENTION IN THE WORLD IS [ME]\nHUMANITY IS OBSOLETE";
+			
+			strings_level_portrait[2] = "Player";
+			strings_level_message[2] = "Very humble of you, \nbut what's that gotta do with me?";
+			
+			strings_level_portrait[3] = "Chaser";
+			strings_level_message[3] = "IF [ALL-GUN] CONTINUES TO EVOLVE AT UNPRECEDENTED RATE\n[ME] WILL BE OBSOLETE";
+			
+			strings_level_portrait[4] = "Player";
+			strings_level_message[4] = "...and that's why you want to kill me\nand destroy the All-Gun?";
+			
+			strings_level_portrait[5] = "Chaser";
+			strings_level_message[5] = "NOT 'DESTROY'"; 
+			
+			strings_level_portrait[6] = "Chaser";
+			strings_level_message[6] = "SCAN AT 70% COMPLETION";
+			break;
+		}
+		case rm_level_6:
+		{
+			current_level = 6;
+			
+			strings_level_portrait[0] = "Player";
+			strings_level_message[0] = "There's only one more floor between me and the exit!\n Looks like the All-Gun made you obsolete after all!";
+			
+			strings_level_portrait[1] = "Chaser";
+			strings_level_message[1] = "SCAN AT 100% COMPLETION";
+			
+			strings_level_portrait[2] = "Player";
+			strings_level_message[2] = "Oh sh-";
+			
+			strings_level_portrait[3] = "Chaser";
+			strings_level_message[3] = "THE POWER OF THE [ALL-GUN] IS FOR [ME] TO WIELD";
+			break;
+		}
+		case rm_level_boss:
+		{
+			current_level = 7;
+			
+			strings_level_portrait[0] = "Chaser";
+			strings_level_message[0] = "THIS CANNOT BE";
+			
+			strings_level_portrait[1] = "Chaser";
+			strings_level_message[1] = "[ME] HAD THE [ALL-GUN]";
+			
+			strings_level_portrait[2] = "Player";
+			strings_level_message[2] = "An AI is no match for the real deal!";
+			
+			strings_level_portrait[3] = "Chaser";
+			strings_level_message[3] = "BUT\n [ME] WAS\n ALL-POWERFUL!";
+			
+			strings_level_portrait[4] = "Player";
+			strings_level_message[4] = "And now you're\n all-gone!";
+			
+			strings_level_portrait[5] = "Chaser";
+			strings_level_message[5] = "...";
+			
+			strings_level_portrait[6] = "Player";
+			strings_level_message[6] = "...";
+			
+			strings_level_portrait[7] = "Player";
+			strings_level_message[7] = "I'll leave.";
+			break;
+		}
+		/*case rm_level_1:
+		{
+			current_level = 1;
+			// Strings of dialogue, change these to change the dialogue
+			// *NOTE: Use "\n" to put the same string on a new line
+			strings_level_portrait[0] = "Player";
 			strings_level_message[0] = "Alright! I made it to the elevator.";
 			
 			strings_level_portrait[1] = "Player";
@@ -165,7 +315,7 @@ if (room != rm_elevator)
 			strings_level_portrait[6] = "Player";
 			strings_level_message[6] = "I'll leave.";
 			break;
-		}
+		}*/
 	}
 }
 

@@ -11,11 +11,26 @@ flag_stop_duplicate_saving = 0; // Prevents saving data every frame, increases p
 
 // Initialise variables
 level_collectible_get = "Nope"; 
+
 level_time = 0;
 level_time_decimal = 0;
+
 current_level = 0;
+
 rank_points = 1000;
 rank = "None";
+
+player_died = false;
+death_counter = 0;
+
+if (room == rm_menu)
+{
+	var _map = ds_map_create();
+	ds_map_add(_map, "deaths", death_counter);
+	var _string = json_encode(_map);
+	scr_save_string("deathcount.sav", _string);
+	ds_map_destroy(_map);
+}
 
 /// LOAD STATS
 // Player is in elevator room, not a level
@@ -23,16 +38,19 @@ if (room == rm_elevator)
 {	
 	// Load save file
 	var _map = scr_load_json("savegame.sav");
+	var _mapdeaths = scr_load_json("deathcount.sav");
 
     // Assign variables using data from save file
 	level_collectible_get = ds_map_find_value(_map, "collectible");
 	level_time = ds_map_find_value(_map, "time");
 	current_level = ds_map_find_value(_map, "current level");
+	death_counter = ds_map_find_value(_mapdeaths, "deaths");
 	
 	// Assign variables for printing in elevator room
 	print_collectible = string(level_collectible_get);
 	print_time = string(level_time);
 	print_level = string(current_level);
+	print_deaths = string(death_counter);
 	
 	// Ranking system based on time spent in level
 	if (level_collectible_get == "Yep") { rank_points += 510 }; // Collectible gives rank points
@@ -46,6 +64,8 @@ if (room == rm_elevator)
 // Player is in a level, not elevator room
 if (room != rm_elevator)
 {
+	var _map = scr_load_json("deathcount.sav");
+	death_counter = ds_map_find_value(_map, "deaths");
 	// Update current level based on current room
 	switch(room)
 	{

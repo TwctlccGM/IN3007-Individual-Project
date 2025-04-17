@@ -1,5 +1,16 @@
 /// @description
 
+if (player_died == true) // Save player death to counter
+{
+	death_counter += 1;
+	var _map = ds_map_create();
+	ds_map_add(_map, "deaths", death_counter);
+	var _string = json_encode(_map);
+	scr_save_string("deathcount.sav", _string);
+	ds_map_destroy(_map);
+	player_died = false;
+}
+
 /// SAVE STATS
 if (level_ended == true)
 {

@@ -1,4 +1,3 @@
 turret = 10;
-shot_speed = 97;
-shot_burst_total = 3;
+shot_speed = 180;
 turret_distance = 100000;

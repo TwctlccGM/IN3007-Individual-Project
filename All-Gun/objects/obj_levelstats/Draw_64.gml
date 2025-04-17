@@ -5,6 +5,7 @@
 print_collectible = string(level_collectible_get);
 print_time = string(level_time);
 print_level = string(current_level);
+print_deaths = string(death_counter);
 
 if (room != rm_level_end && room != rm_elevator)
 {
@@ -16,8 +17,8 @@ if (room != rm_level_end && room != rm_elevator)
 	// Print the variables
 	//draw_text(width_half * 0.1, 10, "Collectible: ");	// Collectible obtained
 	//draw_text(width_half * 0.3, 10, print_collectible);
-	draw_text(width * 0.85, height * 0.025, "Time: ");	// Time taken
-	draw_text(width * 0.9, height * 0.025, print_time);
+	draw_text(width * 0.85, height * 0.025, "Deaths: ");	// Time taken
+	draw_text(width * 0.9, height * 0.025, print_deaths);
 	draw_text(width * 0.15, height * 0.025, "Level: ");		// Current level
 	draw_text(width * 0.2, height * 0.025, print_level);
 
@@ -96,11 +97,13 @@ if (room != rm_level_end && room != rm_elevator)
 if (room == rm_elevator)
 {
 	// Black box
-	draw_sprite_ext(spr_blackbar, 0, width * 0.635, height * 0.4, 5, 5, 0, c_black, 1);
+	draw_sprite_ext(spr_blackbar, 0, width * 0.635, height * 0.285, 5, 8, 0, c_black, 1);
 	
 	// Text
 	draw_set_font(fnt_cutscene);
 	draw_set_color(c_white);
+	draw_text(width * 0.70, height * 0.30, "Level: ");
+	draw_text(width * 0.74, height * 0.30, current_level);
 	draw_text(width * 0.70, height * 0.41, "Level Time: ");
 	draw_text(width * 0.77, height * 0.41, print_time);
 	draw_text(width * 0.70, height * 0.47, "Document Found: ");
@@ -111,8 +114,10 @@ if (room == rm_elevator)
 	else if (rank == "C") { draw_set_color(c_red); };
 	draw_text(width * 0.77, height * 0.53, rank);
 	draw_set_color(c_white);
-	draw_text(width * 0.72, height * 0.61, "Press 'R' to retry");
-	draw_text(width * 0.72, height * 0.65, "Press 'SPACE' to continue");
+	draw_text(width * 0.70, height * 0.59, "Total Deaths: ");
+	draw_text(width * 0.77, height * 0.59, print_deaths);
+	draw_text(width * 0.72, height * 0.66, "Press 'R' to retry");
+	draw_text(width * 0.72, height * 0.70, "Press 'SPACE' to continue");
 }
 
 

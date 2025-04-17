@@ -17,7 +17,13 @@ if (pause_screen == true)
 	draw_text(width_half, height_half * 1.1, "SPACE: Continue");
 	
 	if (keyboard_check_released(vk_escape) && pause_timer >= 10) { scr_slide_transition(TRANSITION_MODE.END); };
-	if (keyboard_check_released(vk_space) && pause_timer >= 10) { pause_screen = false; pause_timer = 0; };
+	if (keyboard_check_released(vk_space) && pause_timer >= 10) 
+	{ 
+		pause_screen = false; 
+		pause_timer = 0; 
+		with (obj_player) { player_paused = false; };
+	with (obj_chaseWall) { paused = false; };
+	};
 }
 
 

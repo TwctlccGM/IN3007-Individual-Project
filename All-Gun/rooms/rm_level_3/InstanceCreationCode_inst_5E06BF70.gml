@@ -1,1 +1,1 @@
-wall_speed = 2;
+wall_speed = 1.5;

@@ -40,6 +40,7 @@ if (room != rm_elevator)
 			audio_play_sound(snd_music_1, 0, 999);
 			strings_level_message[0] = "If I swap to the shotgun mode with [2]...";
 			strings_level_message[1] = "...I can shoot downwards while jumping to propel myself!";
+			strings_level_message[2] = "Gotta remember I can also swap back to rifle mode with [1].";
 			break;
 		}
 		case rm_level_3:
@@ -47,8 +48,9 @@ if (room != rm_elevator)
 			current_level = 3;
 			audio_stop_sound(snd_music_1);
 			audio_play_sound(snd_music_1, 0, 999);
-			strings_level_message[0] = "The laser mode [3] is great for damage and precision...";
-			strings_level_message[1] = "...just gotta remember to hold the trigger!";
+			strings_level_message[0] = "The laser mode [3] can reflect off walls if I hold the trigger.";
+			strings_level_message[1] = "It also does good damage to enemies...";
+			strings_level_message[2] = "...but won't have any effect on cracked walls.";
 			break;
 		}
 		case rm_level_4:
@@ -56,7 +58,7 @@ if (room != rm_elevator)
 			current_level = 4;
 			audio_stop_sound(snd_music_1);
 			audio_play_sound(snd_music_1, 0, 999);
-			strings_level_message[0] = "Rockets [4] can explode to hit through walls...";
+			strings_level_message[0] = "Rockets [4] pack a punch and can explode to hit through walls...";
 			strings_level_message[1] = "...or blast through cracked walls instantly!";
 			break;
 		}
@@ -74,8 +76,8 @@ if (room != rm_elevator)
 			current_level = 6;
 			audio_stop_sound(snd_music_1);
 			audio_play_sound(snd_music_1, 0, 999);
-			strings_level_message[0] = "What would I do without the rifle mode's hover?";
-			strings_level_message[1] = "...probably just die.";
+			strings_level_message[0] = "The Rifle and Shotgun modes will help me move around in the air.";
+			strings_level_message[1] = "I'm close to the end now, I can feel it!";
 			break;
 		}
 		case rm_level_boss:
@@ -83,8 +85,8 @@ if (room != rm_elevator)
 			current_level = 7;
 			audio_stop_sound(snd_music_1);
 			audio_play_sound(snd_music_1, 0, 999);
-			strings_level_message[0] = "Gotta shoot the giant AI, dodge his attacks,\n and make it to the exit!";
-			strings_level_message[1] = "...I'd better get a raise for this.";
+			strings_level_message[0] = "I gotta destroy this wall to lift the lockdown,\n then make it to the exit...";
+			strings_level_message[1] = "...and hopefully not die.";
 			break;
 		}
 		case rm_level_end:
@@ -100,7 +102,7 @@ if (room != rm_elevator)
 			strings_level_message[6] = "Sara Spalding for her helpful \n'Complete Platformer Tutorial' series";
 			strings_level_message[7] = "Reece Geofroy for his \n'How To Pixel Art - Beginner To PRO Tutorial' video";
 			strings_level_message[8] = "GameMaker community forums for \ntheir helpful advice";
-			strings_level_message[9] = "Made in \nGameMaker Studio 2";
+			strings_level_message[9] = "...and You!";
 			break;
 		}
 	}

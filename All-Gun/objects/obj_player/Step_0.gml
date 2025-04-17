@@ -47,7 +47,7 @@ else // Standing
 /// Vertical movement (Jumping)
 
 // If on the ground
-if (place_meeting(x, y + 2, obj_wall)) // Checks if the player is on the ground
+if (place_meeting(x, y + 2, obj_wall) && move_y > -2) // Checks if the player is on the ground
 {
 	coyote_time = 6; // Sets coyote timer
 	move_y = 0; // Stop vertical movement
@@ -109,6 +109,7 @@ if (health_points <= 0) && (flag_audio_player_death = 0)
 { 
 	audio_play_sound(snd_player_defeat, 0, 0);
 	flag_audio_player_death = 1;
+	with (obj_levelstats) { player_died = true; };
 	if (!place_meeting(x, y, obj_wall)) { move_y += 1; };
 	player_paused = true; // Freeze player
 	sprite_index = spr_player_dead; // Change sprite
